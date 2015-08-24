@@ -1,8 +1,8 @@
-# competitive and algorithmic programming code database
+# Competitive and Algorithmic Programming Code Database [bholagabbar]
 
 My complete Competitive/Algorithmic Programming Code Database in one place. The name of the repository is a bit misleading but my primary use of Algorithmic programming so far has been CP so..
 
-This repository contains all the source code I have written till date for algorithmic programming problems, data-structures and implementations and solutions to various Online Judge Problems such as CodeChef, SPOJ, CodeForces nd the like.
+This repository contains all the source code I have written till date for algorithmic programming problems, data-structures and implementations and solutions to various Online Judge Problems such as CodeChef, SPOJ, CodeForces nd the like. My handle on all of these platforms is [bholagabbar]
 
 The organization of files is slightly indirect as there is a lot of navigation invlolved. This is because i git-push directly from my IDE (IDEA) and the files are arranged in such a way. Anyways, here are some of the locations for relevant code:
 
