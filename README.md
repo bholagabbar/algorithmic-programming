@@ -18,8 +18,11 @@ The organization of files is slightly indirect as there is a lot of navigation i
 4. College Stuff: https://github.com/bholagabbar/competitive-programming/tree/master/CODE/Coding%20Workspace/College%20stuff
 [This contains implementations of OOPS concepts and DS-ALGO course in my college. Pretty decent for an elementary level implementation of stacks, queues, linked-list and more. All of these are in C++]
 
-5. Coursera Stanford Algorithms Course: I also have implementations of programming questions asked and datastructures taught in the Coursera Algorithms course by Tim RoughGarden. Tried to make them as efficient as possible
+5. Coursera Stanford Algorithms Course: https://github.com/bholagabbar/competitive-programming/tree/master/CODE/Coding%20Workspace/COURSERA_ALGOS1
+[I also have implementations of programming questions asked and datastructures taught in the Coursera Algorithms course by Tim RoughGarden. Tried to make them as efficient as possible]
 
-And a lot of mostly self explanatory miscellaneous stuff. 
+And finally a lot of mostly self explanatory miscellaneous stuff. 
 
-If you're looking for scourginf for some solutions to problems you could not solve or are looking for some DS/ALGOS implementation, do consider checking my repository out.
+If you're looking for scourging for some solutions to problems you could not solve or are looking for some correct and fairly efficent DS/ALGOS implementation, do consider checking my repository out. 
+
+Thanks and contribute to any bugs you find, though that's unlikely :P
