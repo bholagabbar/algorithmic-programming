@@ -1,0 +1,16 @@
+14:04:51 **** Build of configuration Debug for project Eclipse C++ ****
+make all 
+'Building file: ../TEST1.cpp'
+'Invoking: Cross G++ Compiler'
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TEST1.d" -MT"TEST1.d" -o "TEST1.o" "../TEST1.cpp"
+'Finished building: ../TEST1.cpp'
+' '
+'Building target: Eclipse C++'
+'Invoking: Cross G++ Linker'
+g++  -o "Eclipse C++"  ./TEST1.o   
+c:/gcc/bin/../lib/gcc/x86_64-w64-mingw32/4.8.2/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x3d): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+make: *** [Eclipse C++] Error 1
+
+14:04:52 Build Finished (took 739ms)
+
