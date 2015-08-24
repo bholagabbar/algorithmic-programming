@@ -11,6 +11,7 @@ class Test {
         InputReader in = new InputReader(System.in);
         OutputWriter out = new OutputWriter(System.out);
         out.printLine("Hello World");
+        out.printLine("Commit and Push");
     }
 
     //FAST IO
