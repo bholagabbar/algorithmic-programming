@@ -10,7 +10,7 @@ class Test {
         //System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/src/Stdin_File_Read.txt"));
         InputReader in = new InputReader(System.in);
         OutputWriter out = new OutputWriter(System.out);
-
+        int t=in.readInt();
 
     }
 
