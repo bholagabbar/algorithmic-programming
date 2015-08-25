@@ -25,4 +25,4 @@ And finally a lot of mostly self explanatory miscellaneous stuff.
 
 As mentioned before, if you're scourging for some solutions to problems you could not solve or are looking for some correct and fairly efficent DS/ALGOS implementation, do consider checking my repository out. 
 
-Thanks and contribute to any bugs you find, though that's unlikely :P
+Thanks and help me fix a bug incase you stumble upon this repository and find one :)
