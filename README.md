@@ -2,7 +2,7 @@
 
 My complete Algorithmic/Competitive Programming Code Database in one place. 
 
-This repository contains all the source code I have written till date for algorithmic programming problems, data-structures and implementations and solutions to various Online Judge Problems such as CodeChef, SPOJ, CodeForces nd the like. My handle on all of these platforms is [bholagabbar]
+This repository contains all the source code I have written till date (and will continue to do so) for algorithmic programming problems, data-structures and implementations and solutions to various Online Judge Problems such as CodeChef, SPOJ, CodeForces and the like. The primary aim of this repository is to act as a backup for all my source code if lost and also be of help to someone looking for algorithmic implementations/solutions to certain OJ problems for reference.  My handle on all of these platforms is [bholagabbar]
 
 The organization of files is slightly indirect as there is a lot of navigation involved. This is because i git-push directly from my IDE (IDEA) and the files are arranged in such a way. Anyways, here are some of the locations for relevant code:
 
@@ -23,6 +23,6 @@ The organization of files is slightly indirect as there is a lot of navigation i
 
 And finally a lot of mostly self explanatory miscellaneous stuff. 
 
-If you're scourging for some solutions to problems you could not solve or are looking for some correct and fairly efficent DS/ALGOS implementation, do consider checking my repository out. 
+As mentioned before, if you're scourging for some solutions to problems you could not solve or are looking for some correct and fairly efficent DS/ALGOS implementation, do consider checking my repository out. 
 
 Thanks and contribute to any bugs you find, though that's unlikely :P
