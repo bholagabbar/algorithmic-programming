@@ -2,18 +2,27 @@ import java.io.*;
 import java.util.InputMismatchException;
 
 /**
- * Created by Shreyans Sheth [bholagabbar] on $DATE at $TIME using IntelliJ IDEA (Fast IO Template)
+ * Created by Shreyans Sheth [bholagabbar] on 8/28/2015 at 12:31 AM using IntelliJ IDEA (Fast IO Template)
  */
 
-class $NAME 
+class MARBLES
 {
+
     public static void main(String[] args) throws Exception
     {
         //System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/src/Stdin_File_Read.txt"));
         InputReader in = new InputReader(System.in);
         OutputWriter out = new OutputWriter(System.out);
-        
-
+        int t=in.readInt();
+        while(t-->0)
+        {
+            long n=(long)in.readDouble();
+            long k=(long)in.readDouble();
+            long ans=1,b=1;
+            for(long i=k;i<n;i++)//((n-k)+k-1)C(r-1))
+                ans=(ans*i)/b++;
+            out.printLine(ans);
+        }
     }
 
     //FAST IO
@@ -154,7 +163,10 @@ class $NAME
             writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
         }
 
-        public OutputWriter(Writer writer) { this.writer = new PrintWriter(writer);}
+        public OutputWriter(Writer writer)
+        {
+            this.writer = new PrintWriter(writer);
+        }
 
         public void print(Object... objects)
         {
@@ -174,8 +186,14 @@ class $NAME
             writer.flush();
         }
 
-        public void close() {writer.close();}
+        public void close()
+        {
+            writer.close();
+        }
 
-        public void flush() {writer.flush();}
+        public void flush()
+        {
+            writer.flush();
+        }
     }
 }

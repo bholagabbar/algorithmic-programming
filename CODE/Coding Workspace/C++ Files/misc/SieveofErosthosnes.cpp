@@ -13,7 +13,7 @@ void SOE()
 	a[0]=a[1]=0; //0 and 1 are not primes
 	for(long i=2;i<=sqrt(size);i++) //Check till only the square root for prime factors
 		if(a[i]) //If it is a prime, all the factors are marked non prime
-			for(long j=2*i;j<=size;j++) //marking all factors non prime
+			for(long j=2*i;j<=size;j+=1) //marking all factors non prime
 				a[j]=0;
 }
 
