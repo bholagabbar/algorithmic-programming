@@ -79,10 +79,16 @@ class KragersMinCut
                 j=p;
                 al.add(Integer.parseInt(input.trim())-1);
             }
+            System.out.print(al.get(0)+" ");
             for(int j=1;j<al.size();j++)
             {
                 EdgeList.add(new Edge(al.get(0),al.get(j)));//Source,Destination
+                if(j!=al.size()-1)
+                    System.out.print(al.get(j)+" ");
+                else
+                    System.out.print(al.get(j));
             }
+            System.out.println();
         }
         //Edge list ready
         int MinCut=Integer.MAX_VALUE;

@@ -1,3 +1,8 @@
+/*input
+2
+19 9000000
+17 9876543
+*/
 #include <iostream>
 #include <math.h>
 using namespace std;
@@ -25,7 +30,8 @@ int main()
 			int cnt=0;
 			for(int i=1;;i++)
 			{
-				long long temp=pow(x,i);
+				long long temp=ceil(pow(x,i));
+				//cout<<temp<<endl;
 				if(con[temp%10]==0)
 				{
 					con[temp%10]=1;
