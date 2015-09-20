@@ -1,14 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 #define endl '\n'
 #define pb emplace_back
 #define f first
 #define s second
 #define mp make_pair
 
+typedef long long int ll;
+
 //Created by Shreyans Sheth [bholagabbar]
 
-unsigned long long C[2001][2001];
+ll C[2001][2001];
 
 void COMBINATIONS()
 {
@@ -51,7 +54,7 @@ int main()
  			}
  		}
  	}
- 	unsigned long long int ans=C[n][3]-cnt;//Nc3 - Collinear points C 3
+ 	ll ans=C[n][3]-cnt;//Nc3 - Collinear points C 3
  	cout<<ans;
 	return 0;
 }

@@ -1,17 +1,11 @@
 /*input
-3
+4 4 6
 2 2
-aa
-aA
-3 3
-aba
-bab
-aba
+3 2 
+3 2 
+4 3
 4 4
-aabb
-aabb
-bbaa
-bbaa
+4 3
 */
 #include <bits/stdc++.h>
 using namespace std;

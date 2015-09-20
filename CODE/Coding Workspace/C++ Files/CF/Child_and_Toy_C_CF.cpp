@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 #define pii pair<int,int>
 #define f first
@@ -44,10 +42,8 @@ int main()
         v.pop_back();
         int cv=cur.f;//current vertex
         int cw=cur.s;//its weight
-        for(int i=0;i<a[cv].size();i++)//iterating through all adjacent vertices of this vertex
-        {
-            sum+=w[a[cv][i]];//adding weights of adjacent vertices
-        }
+        for(auto i:a[cv])//iterating through all adjacent vertices of this vertex
+            sum+=w[i];//adding weights of adjacent vertices
         w[cv]=0;//Since the vertex has been removed, weight is 0
     }
     cout<<sum;
