@@ -1,47 +1,82 @@
 import java.io.*;
 import java.util.InputMismatchException;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
- * Created by Shreyans Sheth [bholagabbar] on 9/14/2015 at 4:09 AM using IntelliJ IDEA (Fast IO Template)
+ * Created by Shreyans Sheth [bholagabbar] on 8/30/2015 at 5:08 PM using IntelliJ IDEA (Fast IO Template)
  */
 
-class TEST
+class qb2
 {
+    static class Node//Storing a pair of numbers
+    {
+        int x, y;
+        Node(int x, int y)
+        {
+            this.x=x;
+            this.y=y;
+        }
+    }
+
+    static int[] cnt=new int[1000005];//Stores the number of times this vertex/volume is encountered
+    static int[] steps=new int[1000005];//Steps taken to reach this vertex. Accumulated over all tries
+    static int max;
+
+    static void BFS(int x, int m)
+    {
+        boolean[] visited=new boolean[1000005];
+        Queue<Node>q=new LinkedList<Node>();
+        q.add(new Node(x, 0));//source
+        while(!q.isEmpty())
+        {
+            Node curr=q.poll();
+            int cv=curr.x;//Current vertex
+            int cs=curr.y;//Current Steps
+            if(!visited[cv] && cv<=max)
+            {
+                visited[cv]=true;
+                cnt[cv]++;
+                steps[cv]+=cs;
+                q.add(new Node(x*m,cs+1));
+                q.add(new Node(x/m,cs+1));
+            }
+        }
+    }
+
     public static void main(String[] args) throws Exception
     {
-        //System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/src/Stdin_File_Read.txt"));
+        System.setIn(new FileInputStream("E:\\Shreyans\\Documents\\Code\\CODE\\src\\MISC\\CODE_TEST\\src\\qb2_t.txt"));
         InputReader in = new InputReader(System.in);
         OutputWriter out = new OutputWriter(System.out);
-        int x=in.readInt();
-        if(x==1)
+        int t=in.readInt();
+        int q=0;
+        while(q++<t)
         {
-            in.readInt();
-            System.out.println("a 15 12");
-            in.readInt();
-            in.readInt();
-            System.out.println("a 14 10");
-            in.readInt();
-            in.readInt();
-            in.readString();
-            System.out.println("b 12 11");
-            in.readInt();
-            in.readInt();
-            System.out.println("c 9 10");
-            in.readInt();
-            in.readInt();
-            System.out.println("a 7 7");
-            in.readInt();
-            in.readInt();
-            in.readString();
-            System.out.println("c 6 7");
-            in.readInt();
-            in.readInt();
-            System.out.println("a 3 8");
-            in.readInt();
-            in.readInt();
-            System.out.println("a 1 6");
-            in.readString();
-            in.readString();
+            int n=in.readInt();
+            int m=in.readInt();
+            int[] a=new int[n];
+            max=-1;
+            for(int i=0;i<n;i++)
+            {
+                a[i]=in.readInt();
+                max=Math.max(a[i],max);
+            }
+            for(int i=0;i<n;i++)
+                BFS(a[i],m);//Running BFS on all volumes
+            Node ans=new Node(Integer.MAX_VALUE,-1);//Stores the steps required by all volumes to reach this volume followed by the volume
+            for(int i=0;i<=max;i++)
+                if(cnt[i]==n && steps[i]<ans.x)
+                {
+                    ans.x=steps[i];
+                    ans.y=i;
+                }
+            if(ans.x==Integer.MAX_VALUE)
+                out.printLine(ans.y);
+            else
+            {
+                out.printLine(ans.x+" "+ans.y);
+            }
         }
 
     }
