@@ -24,7 +24,7 @@ int main()
 	//ReadFile;
 	int tc;
 	cin>>tc;
-	while(tc--)
+	while(1)
 	{
 		int m;
 		double p;
