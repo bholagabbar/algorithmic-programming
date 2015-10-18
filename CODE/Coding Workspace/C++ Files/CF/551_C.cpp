@@ -1,82 +1,76 @@
 /*input
-3 2
-1 0 2
+2 1
+1 1
 */
 #include <bits/stdc++.h>
 using namespace std;
+#define ReadFile freopen("E:/Shreyans/Documents/Coding Workspace/STDINPUT.txt","r",stdin);
+#define BoostIO ios_base::sync_with_stdio(false)
+#define CLR(s) memset(&s, 0, sizeof(s))
+#define hashset unordered_set
+#define hashmap unordered_map
+#define pii pair<int,int>
+#define pb push_back
+#define mp make_pair
+#define F first
+#define S second
+#define MOD 1000000007
 #define endl '\n'
+
+typedef long long int ll;
+typedef long double ld;
+
+ll a[1000000];
 
 //Created by Shreyans Sheth [bholagabbar]
 
-typedef long long int ll;
-
-vector <ll> a;
-ll ss;
-
-int BinarySearch()
+bool check(ll x, int n, int m)
 {
-	vector <ll> b=a; //copy
-	ll lo=2;
-	ll hi=accumulate(a.begin(),a.end(),0)+a.size();
-	int findex=a.size()-1;
-	for(int i=a.size()-1;i>=0;i--) //finding last non zero endex to reach
+	ll boxi=n-1;
+	for(int i=0;i<m;i++)
 	{
-		if(a[i]!=0)
+		ll t=x;
+		t-=boxi+1;//time taken to reach
+		//cout<<x<" "<<"Time curr "<<t<<endl;
+		if(t<0)
+			return 0;
+		while(t>0)
 		{
-			findex=i;//HAS to reach here
-			break;
-		}
-	}
-	int cnt=0;
-	while(lo<hi)
-	{
-		ll x= lo+ (hi-lo)/2;//BS for minimum time
-		x=x-(findex+1); //Since time needed has to be atleast (last non zro box index(0 indexing)+1)
-		if(x<=0)
-			break;
-		int p=0;
-		
-
-		ll load=0,stud=1;
-		for(int i=0;i<=findex;i++)
-		{
-			if(load+a[i]+1>x)
-			{
-				load=a[i]+(i+1);
-				stud++;
-			}
+			t-=a[boxi];
+		//	cout<<"Removing "
+			if(t<0)
+				a[boxi]-=t;
 			else
-			{
-				load+=a[i]+(i+1);//Carrying on seconds. Since second guy will have to walk as much as first gut atleast
-			}
+				boxi--;
 		}
-		cout<<x<<" "<<stud<<endl;
-
-		cnt++;
-		if(cnt>20)
-			break;
-
-		if(stud<=ss)
-			hi=x;
-		else
-			lo=x+1;
+		if(boxi==-1)
+			return 1;
 	}
-	return lo;
+	return 0;
 }
 
+ll BinarySearch(int n, int m)
+{
+	ll l=0,h=(ll)1e4;
+	while(l<h)
+	{
+		ll mid=l+(h-l+1)/2;
+		if(check(mid,n,m))
+			h=mid-1;
+		else
+			l=mid+1;
+	}
+	return l;
+}
 
 int main()
 {
-	ios_base::sync_with_stdio(false);
-    //freopen("E:/Shreyans/Documents/Coding Workspace/STDINPUT.txt","r",stdin);
-    int n;
-    cin>>n>>ss;
-    for(int i=0;i<n;i++)
-    {
-    	ll x;
-    	cin>>x;
-    	a.push_back(x);
-    }
-    cout<<BinarySearch();
+	//ReadFile;
+	BoostIO;
+	int n,m;
+	cin>>n>>m;
+	for(int i=0;i<n;i++)
+		cin>>a[i];
+	cout<<BinarySearch(n,m);
 	return 0;
 }

@@ -1,3 +1,4 @@
+#Implementation of QuickSort in Python
 def Partition(a,l,r):
 	a[l],a[(l+r)//2]=a[(l+r)//2],a[l] #Middle Element as pivot. Getting to front
 	pivot=a[l] # choosing pivot

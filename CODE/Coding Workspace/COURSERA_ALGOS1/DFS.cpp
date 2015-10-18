@@ -11,10 +11,7 @@ void DFS(int x, int n)
 	cout<<x<<" ";
 	for(int i:g[x])
 		if(!visited[i])
-		{
-			visited[i]=1;
 			DFS(i,n);
-		}
 }
 
 int main()
