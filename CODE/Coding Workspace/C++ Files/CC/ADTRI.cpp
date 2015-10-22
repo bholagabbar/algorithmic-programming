@@ -69,10 +69,6 @@ int main()
 			printf("YES\n");
 		else
 			printf("NO\n");
-		int x1[2]={1,2};
-		for(auto i:x1)
-			cout<<i<<endl;
 	}
 	return 0;
 }
-//"shell_cmd" : "g++ \"${file}\" -o \"${file_path}/${file_base_name}\" -std=c++14 && \"${file_path}/${file_base_name}\"",

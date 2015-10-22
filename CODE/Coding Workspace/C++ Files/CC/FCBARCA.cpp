@@ -1,3 +1,8 @@
+/*input
+2
+2 4
+4 2
+*/
 #include <bits/stdc++.h>
 using namespace std;
 #define readFile freopen("E:/Shreyans/Documents/Coding Workspace/STDINPUT.txt","r",stdin);
@@ -17,55 +22,30 @@ using namespace std;
 #define S second
 #define endl '\n'
 
-class LinkedList
-{
-private:
-	struct node
-	{
-		int data;
-		node* next;
-	};
-	node* head;
-	node* temp;
-public:
-	LinkedList()
-	{
-		head=head->next=NULL;
-	}
-	void InsertNode(int key)
-	{
-		node* n=new node(); 
-		n->data=key;
-		n->next=NULL;
-		if(head!=NULL)
-		{
-			temp=head;
-			while(temp->next!=NULL)
-				temp=temp->next;
-			temp->next=n;
-		}
-		else
-			head=n;
-	}
-
-	void PrintNode()
-	{
-		temp=head;
-		while(temp!=NULL)
-		{
-			cout<<temp->data<<" ";
-			temp=temp->next;
-		}
-		cout<<endl;
-	}
-};
-
+const ll MOD=1000000007;
+ll dp[100005];
 
 int main()
 {
-	LinkedList l;
-	l.InsertNode(5);
-	l.InsertNode(7);
-	l.InsertNode(10);
-	l.PrintNode();
+	//readFile;
+	boostIO;
+	int tc;
+	cin>>tc;
+	while(tc--)
+	{
+		int n,cnt;
+		ll k,val=1;
+		cin>>n>>k;
+		n%2==0?cnt=1:cnt=-1;
+		for(int i=1;i<n;i++)
+		{
+			val=(val%MOD*k)%MOD;
+			dp[i]=(dp[i-1]%MOD+(val*cnt))%MOD;
+			if(dp[i]<0)// oh bc
+				dp[i]=(dp[i]+MOD)%MOD;
+			cnt*=-1;
+		}
+		cout<<dp[n-1]%MOD<<endl;
+	}
+	return 0;
 }

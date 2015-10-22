@@ -19,8 +19,8 @@ and this could become very time consuming
 //SEGMENT TREE: BUILD, MAX_RANGE_QUERY, UPDATE
 
 int a [STsize];
-int st [STsize<<4];
-int lazy [STsize<<4];
+int st [STsize<<2];
+int lazy [STsize<<2];
 
 void buildST(int pos, int lo, int hi) //Building Segment Tree
 {
@@ -33,7 +33,6 @@ void buildST(int pos, int lo, int hi) //Building Segment Tree
     }
     buildST(2*pos,lo,(lo+hi)/2); //Recursively Building Left child
     buildST(2*pos+1,1+(lo+hi)/2,hi); //Recursively building Right Child
-
     st[pos]=max(st[2*pos],st[1+ 2*pos]); //setting the parent node as the max of the children node
 }
 
@@ -92,7 +91,6 @@ void updateST(int node, int a,int b, int i, int j, int value) //Updating array i
 
 	updateST(2*node, a, (a+b)/2, i,j,value);
 	updateST(2*node+1, 1+ (a+b)/2, b, i,j,value);
-
 	st[node]=max(st[2*node],st[2*node+1]);
 }
 
@@ -104,16 +102,8 @@ int main()
 	int n;//size of array
     cin>>n;
     for(int i=0;i<n;i++)
-    {
-        cin>>a[i];
-    }
+    	cin>>a[i];
     buildST(1,0,n-1);//Building SegTree
-
-	for(int i=1;i<=7;i++)
-	{
-		cout<<st[i]<<" ";
-	}
-	cout<<endl<<endl;
 
 	updateST(1,0,n-1,1,n,5);
 

@@ -61,7 +61,7 @@ public:
 			curr=curr->next;
 		}
 		temp->next=NULL;//Setting the second last element as the end of the list
-	d	elete curr;
+		delete curr;
 	}
 
 	void DeleteValue(int val)
