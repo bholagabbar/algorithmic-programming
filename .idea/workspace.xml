@@ -2,55 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b01d01c-ab6d-4733-a285-a5944cc890cc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/Python Scripts/ACMKP02.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DP.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/Practice/592_C.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/476_V/A.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/486_V/A.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/570_V/A.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/588_V/A.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_327/src/A.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/src/A.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/ACM14AM1.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/ACM14AM3.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/ACM14KP2.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/CODECHEF/PRACTICE/EASY/src/ACM14KP2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/ACM15KP5.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/AE00.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/AE00.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/476_V/B.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/570_V/B.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/588_V/B.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_327/src/B.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/src/B.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/588_V/C.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/src/C.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/COINS.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/SPOJ/src/COINS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/src/C_486.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/DATASTRUCTURES/src/DP/src/Coin_Change.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/TOPCODER/src/ColoredStrokes.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/476_V/D.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_327/DIV2_327.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/DIV2_328.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_327/src/E.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/EIGHTS.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/Python Scripts/ELIS.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/SPOJ/src/MAXSEQ.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/PRIME1.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/PRINT.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/SPOJ/src/PRINT.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Prim.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/TOPCODER/src/RabbitNumbering.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/476_V/a.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/486_V/a.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/570_V/a.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/DS_ALGO/a.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/a.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/TOPCODER/src/grafixCorrupt.java" />
-      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\C++ Files\SPOJ\FLIPCOIN.cpp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/src/C.java" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/src/C.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Code.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,8 +28,8 @@
       <file leaf-file-name="C.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/src/C.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6640625">
-              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.5755208">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -269,28 +222,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="C++ Files" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CODE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Coding Workspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="C++ Files" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Misc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -705,7 +636,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -719,7 +650,7 @@
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.49707174" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16544656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16544656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1168,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/src/C.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6640625">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.5755208">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding />
         </state>
       </provider>

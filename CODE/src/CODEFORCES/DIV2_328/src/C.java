@@ -12,8 +12,7 @@ class C
         //System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/src/Stdin_File_Read.txt"));
         InputReader in = new InputReader(System.in);
         OutputWriter out = new OutputWriter(System.out);
-
-
+        System.out.println("YOLO");
     }
 
     //FAST IO
