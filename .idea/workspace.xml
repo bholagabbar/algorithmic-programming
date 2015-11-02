@@ -2,32 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b01d01c-ab6d-4733-a285-a5944cc890cc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Basic OOPS.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Dijkstra.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/DoublyLinkedList.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Heap_BST.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Linked_list.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Linked_list2.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/PT07Y.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/PT07Y.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Prims.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Prims.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Queue.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/QuickSort.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Stack_InfixToPostfix.cpp" />
-      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\Heap_w8.cpp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\Prim.cpp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w1_1.cpp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w2_1_queue.cpp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w2_stack_InfixToPostfix.cpp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w3_1.cpp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w3_linkedlist.cpp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w4_DLinkedList.cpp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/Practice/592_C.py" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/Practice/592_C.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/TEST.cpp" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/TEST.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/a.exe" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/a.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/a.exe" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/a.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/a.exe" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/a.exe" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\C++ Files\CC\FCBARCA.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\C++ Files\SPOJ\AE00.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\C++ Files\SPOJ\PT07Y.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\BST.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\HashTable.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\Heap.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\HeapSort.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\HeapSort_test.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\Heap_w8.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\Kruskal.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\MergeSort.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\Prims.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\a.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w1_2.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w2_stack_InfixToPostfix.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w3_1.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w3_linkedlist.exe" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w4_DLinkedList.exe" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Code.iws" />
@@ -53,8 +45,8 @@
       <file leaf-file-name="C.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/src/C.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6729776">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.29259896">
+              <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -662,7 +654,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446386554604</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Update 11/3/2015. Updated basic datastructures">
+      <created>1446450910649</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1446450910649</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -750,7 +748,8 @@
     <MESSAGE value="Update 11/01/2015" />
     <MESSAGE value="&#10;" />
     <MESSAGE value="Update 11/1/2015" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 11/1/2015" />
+    <MESSAGE value="Update 11/3/2015. Updated basic datastructures" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 11/3/2015. Updated basic datastructures" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1130,8 +1129,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/src/C.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6729776">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.29259896">
+          <caret line="11" column="99" selection-start-line="11" selection-start-column="99" selection-end-line="11" selection-end-column="99" />
           <folding />
         </state>
       </provider>
