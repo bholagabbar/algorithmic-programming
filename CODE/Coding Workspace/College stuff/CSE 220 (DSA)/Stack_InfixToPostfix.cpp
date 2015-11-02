@@ -41,7 +41,7 @@ int main()
 				cout<<x[i];
 			else if(x[i]=='*' || x[i]=='-' || x[i]=='+' || x[i]=='/' || x[i]=='^' || x[i]=='(')
 			{
-				while(!s.empty() && priority(x[i])>=s.top())
+				while(!s.empty() && priority(x[i])>=priority(s.top()))
 				{
 					cout<<s.top();
 					s.pop();

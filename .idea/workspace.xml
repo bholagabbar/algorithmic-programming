@@ -2,7 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b01d01c-ab6d-4733-a285-a5944cc890cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/src/C.java" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/src/C.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Basic OOPS.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Dijkstra.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/DoublyLinkedList.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Heap_BST.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Linked_list.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Linked_list2.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/PT07Y.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/PT07Y.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Prims.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Prims.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Queue.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/QuickSort.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Stack_InfixToPostfix.cpp" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\Heap_w8.cpp" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\Prim.cpp" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w1_1.cpp" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w2_1_queue.cpp" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w2_stack_InfixToPostfix.cpp" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w3_1.cpp" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w3_linkedlist.cpp" afterPath="" />
+      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\w4_DLinkedList.cpp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/Practice/592_C.py" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/Practice/592_C.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/TEST.cpp" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/TEST.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/a.exe" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/a.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/a.exe" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/a.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/a.exe" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/a.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Code.iws" />
@@ -28,8 +53,8 @@
       <file leaf-file-name="C.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/src/C.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5755208">
-              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.6729776">
+              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -631,11 +656,17 @@
       <option name="project" value="LOCAL" />
       <updated>1445500429029</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Update 11/1/2015">
+      <created>1446386554604</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1446386554604</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -646,7 +677,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3234811" sideWeight="0.5878477" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3234811" sideWeight="0.5878477" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.49707174" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1099,8 +1130,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/src/C.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5755208">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.6729776">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
           <folding />
         </state>
       </provider>

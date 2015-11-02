@@ -1,71 +1,68 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define readFile freopen("E:/Shreyans/Documents/Coding Workspace/STDINPUT.txt","r",stdin);
-#define boostIO ios_base::sync_with_stdio(false)
-#define ld long double
-#define ll long long int
-#define CLR(s) memset(&s, 0, sizeof(s))
-#define scani(s) scanf("%d",&s)
-#define scanl(s) scanf("%lld",&s)
-#define hashset unordered_set //JAVA feels :')
-#define hashmap unordered_map
-#define pll pair<ll,ll>
-#define pii pair<int,int>
-#define pb push_back
-#define mp make_pair
-#define F first
-#define S second
-#define endl '\n'
 
-class LinkedList
+int a[1000005];
+
+inline int scanFast()
 {
-private:
-	struct node
-	{
-		int data;
-		node* next;
-	};
-	node* head;
-	node* temp;
-public:
-	LinkedList()
-	{
-		head=head->next=NULL;
-	}
-	void InsertNode(int key)
-	{
-		node* n=new node(); 
-		n->data=key;
-		n->next=NULL;
-		if(head!=NULL)
-		{
-			temp=head;
-			while(temp->next!=NULL)
-				temp=temp->next;
-			temp->next=n;
-		}
-		else
-			head=n;
-	}
+    int num = 0;
+    char c = getchar_unlocked();
+    bool flag = 0;
+    while(!((c>='0' & c<='9') || c == '-'))
+        c=getchar_unlocked();
+	if(c == '-')
+    {
+        flag = 1;
+        c=getchar_unlocked();
+    }
+    while(c>='0' && c<='9')
+    {
+        num = (num<<1)+(num<<3)+c-'0';
+        c=getchar_unlocked();
+    }
+    if(flag==0)
+        return num;
+    else
+        return -1*num;
+}
 
-	void PrintNode()
-	{
-		temp=head;
-		while(temp!=NULL)
+int partition(int l ,int r)
+{
+	swap(a[l],a[l+rand()%(r-l+1)]);
+	int pos=l+1;
+	int pivot=a[l];
+	for(int i=l+1;i<=r;i++)
+		if(a[pos]<pivot)
 		{
-			cout<<temp->data<<" ";
-			temp=temp->next;
+			swap(a[pos],a[i]);
+			pos++;
 		}
-		cout<<endl;
-	}
-};
+	swap(a[--pos],a[l]);
+	return pos;
+}
 
+void quickSort(int l, int r)
+{
+	if(l<r)
+	{
+		int p=partition(a,l,r);
+		quickSort(a,0,p-1);
+		quickSort(a,p+1,r);
+	}
+}
 
 int main()
 {
-	LinkedList l;
-	l.InsertNode(5);
-	l.InsertNode(7);
-	l.InsertNode(10);
-	l.PrintNode();
+	int tc=scanFast();
+	int tc=scanFast();
+	
+	// while(tc--)
+	// {
+	// 	int n=scanFast();
+	// 	for(int i=0;i<n;i++)
+	// 		a[i]=scanFast();
+	// 	quickSort(0,n-1);
+	// 	for(int i=0;i<n;i++)
+	// 		printf("%d\n",a[i]);
 }
+	

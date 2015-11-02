@@ -11,7 +11,7 @@ if a==1 or b==1:
         den=t
 else:
     lcm=(a*b)//fractions.gcd(a,b)
-    num=t-(t//a+t//b-t//lcm)
+    num=t-(t//a+t//b-(2*t//lcm))
     den=t
 g=fractions.gcd(num,den)
 num=num//g
