@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b01d01c-ab6d-4733-a285-a5944cc890cc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_329/src/A.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_329/src/B.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_329/DIV2_329.iml" />
-      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 219(OOPS)\stak.cpp" afterPath="" />
-      <change type="DELETED" beforePath="E:\Shreyans\Documents\Code\CODE\Coding Workspace\College stuff\CSE 220 (DSA)\Stack_InfixToPostfix.cpp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/Practice/592_C.py" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/Practice/592_C.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/DS_ALGO/GRAPH ALGOS/DIJKSTRA/DIJKSTRA_USE.cpp" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/DS_ALGO/GRAPH ALGOS/DIJKSTRA/DIJKSTRA_USE.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/DIV2_328.iml" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_328/DIV2_328.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/QuickSort.cpp" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/QuickSort.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/src/Stdin_File_Read.txt" afterPath="$PROJECT_DIR$/CODE/src/Stdin_File_Read.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/TEST.cpp" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/TEST.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/a.exe" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/a.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="3b01d01c-ab6d-4733-a285-a5944cc890cc" name="Default" comment="Update 11/4/2015. Revised and Optimized">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/Practice/591_C(median smooting).cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/Practice/592_D(SuperM).cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/InfixToPostfix.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/PERMUT2.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/PERMUT2.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/PT07Z.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/SHPATH.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/SHPATH.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/STAMPS.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/STAMPS.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Stack.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/Python Scripts/TEST.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/TRICOUNT.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/TSHPATH.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/WILLITST.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/a.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/a.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Code.iws" />
@@ -52,8 +56,8 @@
       <file leaf-file-name="SPATH.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CODE/src/SPOJ/src/SPATH.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.7708334">
-              <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.5755208">
+              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
               <folding>
                 <element signature="e#1276#1293#0" expanded="true" />
               </folding>
@@ -742,7 +746,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446451914161</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update 11/4/2015. Revised and Optimized">
+      <created>1446669742473</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1446669742473</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -831,7 +841,8 @@
     <MESSAGE value="&#10;" />
     <MESSAGE value="Update 11/1/2015" />
     <MESSAGE value="Update 11/3/2015. Updated basic datastructures" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 11/3/2015. Updated basic datastructures" />
+    <MESSAGE value="Update 11/4/2015. Revised and Optimized" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 11/4/2015. Revised and Optimized" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1204,8 +1215,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CODE/src/SPOJ/src/SPATH.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7708334">
-          <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.5755208">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
           <folding>
             <element signature="e#1276#1293#0" expanded="true" />
           </folding>
