@@ -1,68 +1,71 @@
+/*input
+100 10 20
+*/
+
+//TEST
+
 #include <bits/stdc++.h>
 using namespace std;
 
-int a[1000005];
+#define ll unsigned long long
+#define PII pair<ll, ll>
+#define f first
+#define s second
+#define F(i,a,b) for(ll i = (ll)(a); i <= (ll)(b); i++)
+#define RF(i,a,b) for(ll i = (ll)(a); i >= (ll)(b); i--)
 
-inline int scanFast()
+ll t, w, b, lcm,  tmp, ans, t1, gc;
+ll gcd(ll a, ll b)
 {
-    int num = 0;
-    char c = getchar_unlocked();
-    bool flag = 0;
-    while(!((c>='0' & c<='9') || c == '-'))
-        c=getchar_unlocked();
-	if(c == '-')
-    {
-        flag = 1;
-        c=getchar_unlocked();
-    }
-    while(c>='0' && c<='9')
-    {
-        num = (num<<1)+(num<<3)+c-'0';
-        c=getchar_unlocked();
-    }
-    if(flag==0)
-        return num;
-    else
-        return -1*num;
+	if (a%b==0)
+		return b;
+	else
+		return gcd(b,a%b);
 }
 
-int partition(int l ,int r)
+/*
+if( a / gc > t /(long double) b  )
 {
-	swap(a[l],a[l+rand()%(r-l+1)]);
-	int pos=l+1;
-	int pivot=a[l];
-	for(int i=l+1;i<=r;i++)
-		if(a[pos]<pivot)
-		{
-			swap(a[pos],a[i]);
-			pos++;
-		}
-	swap(a[--pos],a[l]);
-	return pos;
+	ans = min(a,t+1) ;
 }
-
-void quickSort(int l, int r)
+else 
 {
-	if(l<r)
+	lcm = a / gc * b ;
+	times = t  / lcm ;
+	ans = times * a;
+	ans += min(a,t-times*lcm+1);
+}
+*/
+
+int main() 
+{
+    ios_base::sync_with_stdio(false);cin.tie(0);
+	cin>>t>>w>>b;
+	gc=gcd(w, b);
+	if(w==b)
 	{
-		int p=partition(a,l,r);
-		quickSort(a,0,p-1);
-		quickSort(a,p+1,r);
+		cout<<"1/1";
+		return 0;
 	}
+	if( w / gc > t /(long double) b  )
+		ans = min(w-1, min(t, b-1));
+	else 
+	{
+		lcm=w/gc*b;
+		tmp=min(w,b);
+		ans+=min(tmp-1,t);
+		ans+=t/lcm*tmp;
+		t1=t/lcm*lcm+tmp-1;
+		if(t<t1 && t/lcm)
+		{
+			cout<<"Ya\n";
+			cout<<ans<<endl;
+			ans-=(t1-t);
+			cout<<ans<<endl;
+		}
+	}
+	//cout<<t1<<endl;
+	tmp=gcd(ans,t);
+	cout<<ans/tmp<<"/"<<t/tmp<<endl;
+    return 0;
 }
-
-int main()
-{
-	int tc=scanFast();
-	int tc=scanFast();
-	
-	// while(tc--)
-	// {
-	// 	int n=scanFast();
-	// 	for(int i=0;i<n;i++)
-	// 		a[i]=scanFast();
-	// 	quickSort(0,n-1);
-	// 	for(int i=0;i<n;i++)
-	// 		printf("%d\n",a[i]);
-}
-	

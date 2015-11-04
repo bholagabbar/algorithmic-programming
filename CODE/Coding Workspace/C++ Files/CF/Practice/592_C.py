@@ -1,20 +1,15 @@
 '''input
-5814 31 7
+10 3 2
 '''
 import fractions
 t,a,b=map(int,input().split())
-if a==1 or b==1:
-    if a==1 and b==1:
-        num=den=1
-    else:
-        num=t//max(a,b)
-        den=t
-else:
-    lcm=(a*b)//fractions.gcd(a,b)
-    num=t-(t//a+t//b-(2*t//lcm))
-    den=t
-g=fractions.gcd(num,den)
-num=num//g
-den=den//g
-print(str(num)+'/'+str(den))
-print(den-num)
+lcm=(a*b)//fractions.gcd(a,b)
+mi=min(a,b)
+ans=mi*(t//lcm)+mi-1
+umax=(t//lcm)*lcm +mi-1
+if umax>t: #cant be greater than total
+	ans+=(t-umax);
+hcf=fractions.gcd(ans,t)
+ans//=hcf
+t//=hcf
+print(str(ans)+'/'+str(t))

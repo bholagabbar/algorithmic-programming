@@ -9,10 +9,7 @@ int partition(int a[], int l ,int r)
 	int pivot=a[l];
 	for(int i=l+1;i<=r;i++)
 		if(a[pos]<pivot)
-		{
-			swap(a[pos],a[i]);
-			pos++;
-		}
+			swap(a[pos],a[i]),pos++;
 	swap(a[--pos],a[l]);
 	return pos;
 }
