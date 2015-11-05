@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b01d01c-ab6d-4733-a285-a5944cc890cc" name="Default" comment="Update 11/4/2015. Revised and Optimized">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/Practice/591_C(median smooting).cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CF/Practice/592_D(SuperM).cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/InfixToPostfix.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/PERMUT2.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/PERMUT2.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/PT07Z.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/SHPATH.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/SHPATH.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/STAMPS.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/STAMPS.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/Stack.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/Python Scripts/TEST.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/TRICOUNT.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/TSHPATH.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/WILLITST.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/CC/a.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/a.exe" />
+    <list default="true" id="3b01d01c-ab6d-4733-a285-a5944cc890cc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/ADV_DS_PROJECT/DSU.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/College stuff/CSE 220 (DSA)/ADV_DS_PROJECT/Trie.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/DS_ALGO/GRAPH ALGOS/DIJKSTRA/a.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/DS_ALGO/GRAPH ALGOS/DIJKSTRA/DIJKSTRA_USE.cpp" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/DS_ALGO/GRAPH ALGOS/DIJKSTRA/DIJKSTRA_USE.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_329/DIV2_329.iml" afterPath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_329/DIV2_329.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/SHPATH.cpp" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/SHPATH.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/SHPATH.exe" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/SHPATH.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/a.exe" afterPath="$PROJECT_DIR$/CODE/Coding Workspace/C++ Files/SPOJ/a.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Code.iws" />
@@ -40,52 +31,7 @@
     <favorites_list name="Code" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="A.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_329/src/A.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="239" selection-end-column="1" />
-              <folding>
-                <element signature="e#682#693#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SPATH.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CODE/src/SPOJ/src/SPATH.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5755208">
-              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-              <folding>
-                <element signature="e#1276#1293#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stdin_File_Read.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CODE/src/Stdin_File_Read.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="B.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_329/src/B.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -222,6 +168,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -322,9 +271,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -752,36 +698,42 @@
       <option name="project" value="LOCAL" />
       <updated>1446669742473</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Update 11/4/2015. Revised and Optimized">
+      <created>1446670368554</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1446670368554</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3234811" sideWeight="0.41215226" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6699507" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3234811" sideWeight="0.5878477" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16544656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16544656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3234811" sideWeight="0.41215226" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3234811" sideWeight="0.5878477" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.49707174" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1153,7 +1105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="212" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1161,7 +1112,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1183,15 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35111877">
           <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_329/src/B.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1199,27 +1140,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_329/src/A.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="239" selection-end-column="1" />
-          <folding>
-            <element signature="e#682#693#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CODE/src/SPOJ/src/SPATH.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5755208">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding>
-            <element signature="e#1276#1293#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.7083333">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_329/src/A.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44270834">
+          <caret line="12" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="239" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_329/src/B.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6197917">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>

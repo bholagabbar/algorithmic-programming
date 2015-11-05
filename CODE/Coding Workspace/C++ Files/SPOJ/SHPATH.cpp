@@ -8,15 +8,15 @@ using namespace std;
 #define hashmap unordered_map
 #define pb push_back
 #define mp make_pair
-#define sz 10005
+#define sz 100005
 #define F first
 #define S second
 #define endl '\n'
 
-typedef pair<int, int> pii;
 typedef long long int ll;
-typedef pair<ll, ll> pll;
 typedef long double ld;
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
 
 //Shreyans Sheth [bholagabbar]
 
@@ -24,20 +24,13 @@ bool vis[sz];
 int dis[sz];
 vector<pii> a[sz]; 
 
-class prioritize//Comparator
-{
-public:
-	bool operator ()(pii&p1 ,pii&p2)
-	{
-		return p1.S>p2.S;
-	}
-};
-
 int Dijkstra(int s, int d, int n)
 {
-	priority_queue<pii, vector<pii> , prioritize> pq;
-	dis[s]=0;
-	pq.push(mp(s,0));
+	for(int i=0;i<=n;i++)
+		vis[i]=0, dis[i]=INT_MAX;
+	class prioritize{public: bool operator ()(pii&p1 ,pii&p2){return p1.S>p2.S;}};//Comparator
+	priority_queue<pii, vector<pii>, prioritize> pq;
+	pq.push(mp(s,dis[s]=0));
 	while(!pq.empty())
 	{
 		pii cur=pq.top(); pq.pop();
@@ -55,35 +48,32 @@ int Dijkstra(int s, int d, int n)
 int main()
 {
 	//readFile
-	boostIO;
-	int tc;cin>>tc;
+	boostIO;cin.tie(0);
+	int tc,n,p,q,v2,w;
+	string city,x1,x2;
+	cin>>tc;
 	while(tc--)
 	{
-		int n;cin>>n;
+		cin>>n;
 		for(int i=1;i<=n;i++)
 			a[i].clear();
 		hashmap<string,int> hm;
 		for(int i=1;i<=n;i++)
 		{
-			string city;cin>>city;
+			cin>>city;
 			hm[city]=i;
-			int p;cin>>p;
+			cin>>p;
 			for(int j=0;j<p;j++)
 			{
-				int v2,w;
 				cin>>v2>>w;
 				a[i].pb(mp(v2,w));
 			}
 		}
-		int q;cin>>q;
+		cin>>q;
 		while(q--)
 		{
-			string x1,x2;
 			cin>>x1>>x2;
-			CLR(vis);
-			fill(dis+1,dis+n+1,INT_MAX);
-			int ans=Dijkstra(hm[x1],hm[x2],n);
-			cout<<ans<<endl;
+			cout<<Dijkstra(hm[x1],hm[x2],n)<<endl;
 		}
 	}
 	return 0;

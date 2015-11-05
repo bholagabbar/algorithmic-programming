@@ -10,32 +10,15 @@ using namespace std;
 
 bool vis[100001];
 int dis[100001];
-vector<pii> a[100001]; 
+vector<pii> a[100001];
 
-void init(int n)
+int Dijkstra(int s, int n)
 {
-	for(int i=1;i<=n;i++)
-	{
-		vis[i]=false;
-		a[i].clear();
-		dis[i]=INT_MAX;
-	}
-}
-
-class prioritize//Comparator
-{
-public:
-	bool operator ()(pii&p1 ,pii&p2)
-	{
-		return p1.S>p2.S;
-	}
-};
-
-int Dijkstra(int s)
-{
+	for(int i=0;i<=n;i++)
+		vis[i]=0, dis[i]=INT_MAX;
+	class prioritize{public: bool operator ()(pii&p1 ,pii&p2){return p1.S>p2.S;}};
 	priority_queue<pii, vector<pii> , prioritize> pq;
-	dis[s]=0;
-	pq.push(mp(s,0));
+	pq.push(mp(s,dis[s]=0));
 	while(!pq.empty())
 	{
 		pii cur=pq.top();
@@ -56,7 +39,8 @@ int main()
 	{
 		int v1,v2,w,n,m;
 		cin>>n>>m;
-		init(n);
+		for(int i=0;i<=n;i++)
+			a[i].clear();
 		for(int i=0;i<m;i++)
 		{
 			cin>>v1>>v2>>w;
@@ -64,7 +48,7 @@ int main()
 		}
 		int s;
 		cin>>s;
-		Dijkstra(s);
+		Dijkstra(s,n);
 		for(int i=1;i<=n;i++)
 		{
 			if(dis[i]!=INT_MAX)
