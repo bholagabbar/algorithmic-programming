@@ -32,28 +32,23 @@ void Dijkstra(int s, int n)
 
 int main()
 {
-	int tc;
-	cin>>tc;
-	while(tc--)
+	int v1,v2,w,n,m;
+	cin>>n>>m;
+	for(int i=0;i<=n;i++)
+		a[i].clear();
+	for(int i=0;i<m;i++)
 	{
-		int v1,v2,w,n,m;
-		cin>>n>>m;
-		for(int i=0;i<=n;i++)
-			a[i].clear();
-		for(int i=0;i<m;i++)
-		{
-			cin>>v1>>v2>>w;
-			a[v1].pb(mp(v2,w));
-		}
-		int s;
-		cin>>s;
-		Dijkstra(s,n);
-		for(int i=1;i<=n;i++)
-		{
-			if(dis[i]!=INT_MAX)
-				cout<<dis[i]<<" ";
-			else
-				cout<<"-1 ";
-		}
-	}			
+		cin>>v1>>v2>>w;
+		a[v1].pb(mp(v2,w));
+	}
+	int s;
+	cin>>s;
+	Dijkstra(s,n);
+	for(int i=1;i<=n;i++)
+	{
+		if(dis[i]!=INT_MAX)
+			cout<<dis[i]<<" ";
+		else
+			cout<<"-1 ";
+	}	
 }
