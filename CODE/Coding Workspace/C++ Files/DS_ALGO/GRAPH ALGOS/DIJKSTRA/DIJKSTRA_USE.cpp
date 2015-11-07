@@ -50,5 +50,6 @@ int main()
 			cout<<dis[i]<<" ";
 		else
 			cout<<"-1 ";
-	}	
+	}
+	return 0;
 }
