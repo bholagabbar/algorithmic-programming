@@ -12,7 +12,7 @@ bool vis[100001];
 int dis[100001];
 vector<pii> a[100001];
 
-int Dijkstra(int s, int n)
+void Dijkstra(int s, int n)
 {
 	for(int i=0;i<=n;i++)
 		vis[i]=0, dis[i]=INT_MAX;
