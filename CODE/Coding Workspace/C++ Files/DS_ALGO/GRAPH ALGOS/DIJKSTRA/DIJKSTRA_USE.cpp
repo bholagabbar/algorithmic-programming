@@ -21,8 +21,7 @@ int Dijkstra(int s, int n)
 	pq.push(mp(s,dis[s]=0));
 	while(!pq.empty())
 	{
-		pii cur=pq.top();
-		pq.pop();
+		pii cur=pq.top(); pq.pop();
 		int cv=cur.F,cw=cur.S;
 		vis[cv]=1;
 		for(pii x:a[cv])
