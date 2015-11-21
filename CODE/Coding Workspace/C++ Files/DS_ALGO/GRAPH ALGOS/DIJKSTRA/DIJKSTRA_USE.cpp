@@ -15,7 +15,7 @@ int Dijkstra(int s, int n)
 {
 	for(int i=0;i<=n;i++)
 		vis[i]=0, dis[i]=INT_MAX;
-	class prioritize{public: bool operator ()(pii&p1 ,pii&p2){return p1.S>p2.S;}};
+	class prioritize{public: bool operator ()(pii&p1 ,pii&p2){return p1.S>p2.S;}}; //Comparator
 	priority_queue<pii, vector<pii> , prioritize> pq;
 	pq.push(mp(s,dis[s]=0));
 	while(!pq.empty())
