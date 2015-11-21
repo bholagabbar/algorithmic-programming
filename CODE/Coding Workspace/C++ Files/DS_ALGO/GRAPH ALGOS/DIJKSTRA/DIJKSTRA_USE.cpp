@@ -24,8 +24,7 @@ int Dijkstra(int s, int n)
 		pii cur=pq.top();
 		pq.pop();
 		int cv=cur.F,cw=cur.S;
-        if(vis[cv])
-            continue;
+        	if(vis[cv]) continue;
 		vis[cv]=1;
 		for(pii x:a[cv])
 			if(!vis[x.F] && cw+x.S<dis[x.F])
