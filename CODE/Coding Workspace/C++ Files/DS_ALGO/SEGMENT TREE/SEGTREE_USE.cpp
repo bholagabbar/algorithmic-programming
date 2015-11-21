@@ -8,78 +8,79 @@ using namespace std;
 
 int segtree[sz<<2];
 int lazy[sz<<2];
-int a[sz];
+int arr[sz];
 
-void buildSegTree(int pos, int lo, int hi)
+void buildSegTree(int node, int a, int b)
 {
-	if(lo>hi)
-		return;
-	if(lo==hi)
-	{
-		segtree[pos]=a[lo];
-		return;
-	}
-	buildSegTree((pos<<1),lo,(hi+lo)>>1);
-	buildSegTree((pos<<1)+1,1+((lo+hi)>>1),hi);
-	segtree[pos]=max(segtree[pos<<1],segtree[(pos<<1)+1]);
+    if(a > b) return;
+    if(a == b)
+    {
+        segtree[node] = arr[a];
+        return;
+    }
+    buildSegTree((node<<1),a,(b+a)>>1);
+    buildSegTree((node<<1)+1,1+((a+b)>>1),b);
+    segtree[node]=max(segtree[node<<1],segtree[(node<<1)+1]);
 }
 
-int rangeMaxQuery(int pos, int lo, int hi, int start, int end)
+void updateSegTree(int node, int a, int b, int i, int j, int val)
 {
-	if(lazy[pos]!=0)
-	{
-		segtree[pos]+=lazy[pos];
-		if(lo!=hi)
-		{
-			lazy[(pos<<1)]+=lazy[pos];
-			lazy[(pos<<1)+1]+=lazy[pos];
-		}
-		lazy[pos]=0;
-	}
-	if(lo>hi || start>hi || end<lo)
-		return -INT_MAX;
-	if(lo>=start && hi<=end)
-		return segtree[pos];
-	return max(rangeMaxQuery((pos<<1),lo,(lo+hi)>>1,start,end),rangeMaxQuery((pos<<1)+1,1+((lo+hi)>>1),hi,start,end));
+ 
+    if(lazy[node] != 0)
+    {
+        segtree[node]+=lazy[node];
+        if(a != b)
+        {
+            lazy[node<<1]+=lazy[node];
+            lazy[(node<<1)+1]+=lazy[node];
+        }
+        lazy[node] = 0;
+    }
+    if(a > b || a > j || b < i)
+        return;
+    if(a >= i && b <= j)
+    {
+        segtree[node]+=val;
+        if(a != b)
+        {
+            lazy[node<<1]+=val;
+            lazy[(node<<1)+1]+=val;
+        }
+        return;
+    }
+    updateSegTree((node<<1),a,(a+b)>>1,i,j,val);
+    updateSegTree((node<<1)+1,1+((a+b)>>1),b,i,j,val);
+    segtree[node]=max(segtree[(node<<1)],segtree[(node<<1)+1]);
 }
 
-void updateSegTree(int pos, int lo, int hi, int start, int end, int val)
+int rangeMaxQuery(int node, int a, int b, int i, int j)
 {
-	if(lazy[pos]!=0)
-	{
-		segtree[pos]+=lazy[pos];
-		if(lo!=hi)
-		{
-			lazy[(pos<<1)+1]=lazy[pos];
-			lazy[(pos<<1)+1]=lazy[pos];
-		}
-		lazy[pos]=0;
-	}
-	if(lo>hi || start>hi || end<lo)
-		return;
-	if(lo>=start && hi<=end)
-	{
-		segtree[pos]+=val;
-		if(lo!=hi)
-		{
-			segtree[(pos<<1)+1]=val;
-			segtree[(pos<<1)]=val;
-		}
-		return;
-	}
-	updateSegTree((pos<<1),lo,(lo+hi)>>1,start,end,val);
-	updateSegTree((pos<<1)+1,1+((lo+hi)>>1),hi,start,end,val);
-	segtree[pos]=max(segtree[(pos<<1)],segtree[(pos<<1)+1]);
+ 
+    if(a > b || a > j || b < i)
+        return INT_MIN;
+ 
+    if(lazy[node] != 0)
+    {
+        segtree[node]+=lazy[node];
+        if(a != b)
+        {
+            lazy[node<<1]+=lazy[node];
+            lazy[(node<<1)+1]+=lazy[node];
+        }
+        lazy[node] = 0;
+    }
+    if(a >= i && b <= j)
+        return segtree[node];
+    return max(rangeMaxQuery((node<<1),a,(a+b)>>1,i,j), rangeMaxQuery((node<<1)+1,1+((a+b)>>1),b,i,j));
 }
-
 int main()
 {
 	int n;
 	cin>>n;
 	for(int i=0;i<n;i++)
-		cin>>a[i];
+		cin>>arr[i];
 	buildSegTree(1,0,n-1);
-	cout<<rangeMaxQuery(1,0,n-1,1,4)<<endl;
+	cout<<rangeMaxQuery(1,0,n-1,0,4)<<endl;
 	cout<<rangeMaxQuery(1,0,n-1,2,5)<<endl;
 	updateSegTree(1,0,n-1,2,5,10);
 	cout<<rangeMaxQuery(1,0,n-1,2,5)<<endl;

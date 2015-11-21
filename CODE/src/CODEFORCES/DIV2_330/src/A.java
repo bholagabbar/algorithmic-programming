@@ -2,18 +2,27 @@ import java.io.*;
 import java.util.InputMismatchException;
 
 /**
- * Created by Shreyans Sheth [bholagabbar] on 11/4/2015 at 9:48 PM using IntelliJ IDEA (Fast IO Template)
+ * Created by Shreyans Sheth [bholagabbar] on 11/8/2015 at 9:52 PM using IntelliJ IDEA (Fast IO Template)
  */
 
-public class B
+public class A
 {
     public static void main(String[] args) throws Exception
     {
         //System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/src/Stdin_File_Read.txt"));
         InputReader in = new InputReader(System.in);
         OutputWriter out = new OutputWriter(System.out);
-
-
+        int n=in.readInt(),m=in.readInt();
+        int[][]a=new int[n][2*m];
+        for(int i=0;i<n;i++)
+            for(int j=0;j<2*m;j++)
+                a[i][j]=in.readInt();
+        int cnt=0;
+        for(int i=0;i<n;i++)
+            for(int j=0;j<2*m;j+=2)
+                if(a[i][j]==1 || a[i][j+1]==1)
+                    cnt++;
+        out.printLine(cnt);
     }
 
     //FAST IO

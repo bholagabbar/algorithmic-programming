@@ -8,21 +8,21 @@ int n;//Number of vertices in the graph
 
 void BFS(int s)
 {
-	queue<int> q;//Inbuilt C++ queue. Included in header file <queue> and std namespace
-	bool visited[n+1]={0};//Visited array for BFS to avoid visiting visited vertices again
-	q.push(s);//C++ function to push value into the queue
+	queue<int> q; //Inbuilt C++ queue. Included in header file <queue> and std namespace
+	bool visited[n+1]={0}; //Visited array for BFS to avoid visiting visited vertices again
+	q.push(s); //C++ function to push value into the queue
 	visited[s]=1;
 	cout<<"BFS from Source Vertex "<<s<<":\n";
 	while(!q.empty())
 	{
-		int curr=q.front();//Element at the front of the queue (again, C++ queue function)
-		cout<<curr<<" ";//Current element in the BFS run
-		q.pop();//Removing that element (C++ inbuilt function again)
+		int curr=q.front(); //Element at the front of the queue (again, C++ queue function)
+		cout<<curr<<" "; //Current element in the BFS run
+		q.pop(); //Removing that element (C++ inbuilt function again)
 		for(int i=1;i<=n;i++)
 			if(adj_matrix[curr][i]==1 && !visited[i])//If there exists and edge and the vertex is not visited
 			{
-				q.push(i);//Add that element to the queue
-				visited[i]=1;//Now it has been visited
+				q.push(i); //Add that element to the queue
+				visited[i]=1; //Now it has been visited
 			}
 	}
 	cout<<"\nDONE";

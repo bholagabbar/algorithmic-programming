@@ -28,18 +28,14 @@ public class A
             }
             else if(ts.size()==2)
             {
-                char c1=ts.pollFirst();
-                char c2=ts.pollLast();
-                a[c1-97][c2-97]+=x.length();
-                a[c2-97][c1-97]+=x.length();
+                char c1=ts.pollFirst(),c2=ts.pollLast();
+                a[c1-97][c2-97]=a[c2-97][c1-97]+=x.length();
             }
         }
         int max=0;
         for(int i=0;i<26;i++)
             for(int j=i+1;j<26;j++)
-            {
-                    max=Math.max(max,a[i][j]+a[i][i]+a[j][j]);
-            }
+                max=Math.max(max,a[i][j]+a[i][i]+a[j][j]);
         out.printLine(max);
     }
 

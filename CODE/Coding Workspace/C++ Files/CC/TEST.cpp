@@ -1,71 +1,47 @@
-/*input
-100 10 20
-*/
-
-//TEST
+//Shreyans Sheth [bholagabbar]
 
 #include <bits/stdc++.h>
 using namespace std;
+#define readFile freopen("E:/Shreyans/Documents/Coding Workspace/STDINPUT.txt","r",stdin);
+#define getPrecision(s,p) fixed<<setprecision(p)<<s
+#define boostIO ios_base::sync_with_stdio(0), cin.tie(0)
+#define CLR(s) memset(&s, 0, sizeof s)
+#define hashset unordered_set	//JAVA Feels :')
+#define hashmap unordered_map
+#define pb push_back
+#define mp make_pair
+#define sz 100001
+#define F first
+#define S second
+#define endl '\n'
 
-#define ll unsigned long long
-#define PII pair<ll, ll>
-#define f first
-#define s second
-#define F(i,a,b) for(ll i = (ll)(a); i <= (ll)(b); i++)
-#define RF(i,a,b) for(ll i = (ll)(a); i >= (ll)(b); i--)
+typedef long long int ll;
+typedef long double ld;
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
 
-ll t, w, b, lcm,  tmp, ans, t1, gc;
-ll gcd(ll a, ll b)
+comp(pii a, pii b)
 {
-	if (a%b==0)
-		return b;
+	if((a.F>=a.S && a.F>=b.F && a.F>=b.S)||(a.S>=a.F && a.S>=b.F && a.S>=b.S))
+		return a.F<a.S;
+	else if((a.S>=a.F && a.S>=b.F && a.S>=b.S))
+		return a.S<a.F;
+	else if((b.S>=b.F && b.S>=a.F && b.S>=a.S))
+		return b.S<b.F;
 	else
-		return gcd(b,a%b);
+		return b.F<b.S;
 }
 
-/*
-if( a / gc > t /(long double) b  )
+int main()
 {
-	ans = min(a,t+1) ;
-}
-else 
-{
-	lcm = a / gc * b ;
-	times = t  / lcm ;
-	ans = times * a;
-	ans += min(a,t-times*lcm+1);
-}
-*/
-
-int main() 
-{
-    ios_base::sync_with_stdio(false);cin.tie(0);
-	cin>>t>>w>>b;
-	gc=gcd(w, b);
-	if(w==b)
-	{
-		cout<<"1/1";
-		return 0;
-	}
-	if( w / gc > t /(long double) b  )
-		ans = min(w-1, min(t, b-1));
-	else 
-	{
-		lcm=w/gc*b;
-		tmp=min(w,b);
-		ans+=min(tmp-1,t);
-		ans+=t/lcm*tmp;
-		t1=t/lcm*lcm+tmp-1;
-		if(t<t1 && t/lcm)
-		{
-			cout<<"Ya\n";
-			cout<<ans<<endl;
-			ans-=(t1-t);
-			cout<<ans<<endl;
-		}
-	}
-	//cout<<t1<<endl;
-	tmp=gcd(ans,t);
-	cout<<ans/tmp<<"/"<<t/tmp<<endl;
-    return 0;
+	boostIO;
+	pii a[3];
+	a[0]={4,8};
+	a[1]={1,5};
+	a[2]={2,7};
+	sort(a,a+3,comp);
+	for(auto i:a)
+		cout<<i.F<<" "<<i.S<<endl;
+	
+	return 0;
 }

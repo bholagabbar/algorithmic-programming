@@ -22,20 +22,13 @@ vector<pair<int,int> > a[sz];//Adjacency list
 int dis[sz];//Stores shortest distance
 bool vis[sz]={0};//Determines whether the node has been visited or not
 
-class comparator //Determines priority for priority queue (shortest edge comes first)
-{
-public:
-	bool operator()(pair<int,int> &a1, pair<int,int> &a2)
-	{
-		a1.second>a2.second; //sorting on basis of edge weights
-	}
-};
-
 void Dijkstra(int source, int n) //Algorithm for SSSP 
 {
 	for(int i=0;i<sz;i++) //Set initial distances to Infinity
 		dis[i]=INF;
-	priority_queue<pair<int,int> ,vector<pair<int,int> >,comparator> pq; //Priority queue to store vertex,weight pairs
+	//Custom Comparator for Determining priority for priority queue (shortest edge comes first)
+	class prioritize{public: bool operator ()(pair<int, int>&p1 ,pair<int, int>&p2){return p1.second>p2.second;}};
+	priority_queue<pair<int,int> ,vector<pair<int,int> >, prioritize> pq; //Priority queue to store vertex,weight pairs
 	pq.push(make_pair(source,dis[source]=0)); //Pushing the source with distance from itself as 0
 	while(!pq.empty())
 	{
@@ -52,10 +45,7 @@ void Dijkstra(int source, int n) //Algorithm for SSSP
 	for(int i=1;i<=n;i++)//Printing final shortest distances from source
 	{
 		cout<<"Vertex: "<<i<<" , Distance: ";
-		if(dis[i]!=INF)
-			cout<<dis[i]<<endl;
-		else
-			cout<<"-1\n";
+		dis[i]!=INF? cout<<dis[i]<<"\n" : cout<<"-1\n";
 	}
 }
 

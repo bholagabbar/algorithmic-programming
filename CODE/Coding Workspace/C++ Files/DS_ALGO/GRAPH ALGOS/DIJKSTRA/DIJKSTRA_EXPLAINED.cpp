@@ -70,6 +70,8 @@ void Dijkstra()
 		pii cur=pq.top();
 		pq.pop();
 		int cv=cur.f,cw=cur.s;//This node will be highest priority of all instances of this node
+		if(visited[cv])
+			continue;
 		visited[cv]=true;//Now future instances of this node with higher weight ignored as already visited
 		for(pii x:a[cv])//Iterating through vertices of current vertex
 		{

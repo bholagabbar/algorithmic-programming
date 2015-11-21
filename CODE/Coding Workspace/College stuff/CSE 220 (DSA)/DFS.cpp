@@ -11,7 +11,7 @@ void DFS(int s)
 	visited[s]=1;
 	cout<<s<<" ";
 	for(int i=1;i<=n;i++)
-		if(adj_matrix[s][i]==1 && !visited[i])//Not visited and edge exists
+		if(adj_matrix[s][i]==1 && !visited[i])//Edge exists and Not visited
 			DFS(i);//Recursively calling DFS for the node
 }
 

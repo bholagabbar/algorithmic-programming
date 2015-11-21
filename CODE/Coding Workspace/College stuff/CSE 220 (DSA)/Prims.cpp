@@ -19,9 +19,9 @@ int main()
         int v1,v2,w;
         cin>>v1>>v2>>w;
         graph[v1].pb(mp(v2,w));
-        graph[v2].pb(mp(v1,w));//Undirected graph
+        graph[v2].pb(mp(v1,w)); //Undirected graph
     }
-    int s=1;//Starting vertex
+    int s=1; //Starting vertex
     set<int> vis;
     vis.insert(s);
     cout<<"\nEdges of the MST are:\n";
@@ -30,12 +30,12 @@ int main()
         //Now iterate through every every edge connected to ever visted vertex and choose the minimum
         int minw=100000;
         int vert1=0,vert2=0;
-        for(set<int>::iterator it=vis.begin();it!=vis.end();it++)//Every vertex visited
-            for(int j=0;j<graph[*it].size();j++)//Edge of every visited vertex
+        for(set<int>::iterator it=vis.begin();it!=vis.end();it++) //Every vertex visited
+            for(int j=0;j<graph[*it].size();j++) //Edge of every visited vertex
             {
-                pii curr=graph[*it][j];//Connected Vertex-Wight pair
+                pii curr=graph[*it][j]; //Connected Vertex-Wight pair
                 set<int>::iterator it2=vis.find(curr.first);
-                if(it2==vis.end() && curr.second<minw)//If this vertex does not exist in set and weight is minimum currently, choose it
+                if(it2==vis.end() && curr.second<minw) //If this vertex does not exist in set and weight is minimum currently, choose it
                 {
                     vert1=*it;
                     vert2=curr.first;
@@ -43,7 +43,7 @@ int main()
                 }
             }
         vis.insert(vert2);
-        cout<<(char)(vert1+64)<<" "<<(char)(vert2+64)<<" "<<minw<<endl;//Edge of the MST
+        cout<<(char)(vert1+64)<<" "<<(char)(vert2+64)<<" "<<minw<<endl; //Edge of the MST
     }
     //getchar();getchar();
     return 0;

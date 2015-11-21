@@ -2,7 +2,7 @@
 using namespace std;
 #define readFile freopen("E:/Shreyans/Documents/Coding Workspace/STDINPUT.txt","r",stdin);
 #define getPrecision(s,p) fixed<<setprecision(p)<<s
-#define boostIO ios_base::sync_with_stdio(false)
+#define boostIO ios_base::sync_with_stdio(0), cin.tie(0)
 #define CLR(s) memset(&s, 0, sizeof s)
 #define hashset unordered_set
 #define hashmap unordered_map
@@ -37,6 +37,8 @@ int Dijkstra(int s, int d, int n)
 		int cv=cur.F,cw=cur.S;
 		if(cv==d)
 			return cw;
+		if(vis[cv])
+			continue;
 		vis[cv]=1;
 		for(pii x:a[cv])
 			if(!vis[x.F] && cw+x.S<dis[x.F])
