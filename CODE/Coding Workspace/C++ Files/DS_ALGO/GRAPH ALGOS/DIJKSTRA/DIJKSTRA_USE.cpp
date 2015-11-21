@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define endl '\n'
-#define endl '\n'
 #define pii pair<int,int>
 #define F first
 #define S second
