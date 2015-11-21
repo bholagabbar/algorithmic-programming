@@ -50,7 +50,7 @@ int Dijkstra(int s, int d, int n)
 int main()
 {
 	//readFile
-	boostIO;cin.tie(0);
+	boostIO;
 	int tc,n,p,q,v2,w;
 	string city,x1,x2;
 	cin>>tc;
