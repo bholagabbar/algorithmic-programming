@@ -1,52 +1,44 @@
 #include <iostream>
 using namespace std;
 
-void Merge(int a[],int l[], int r[],int ll,int rl,int n)
+void Merge(int a[], int leftArr[], int rightArr[], int size, int lsize, int rsize)
 {
-	int i=0,j=0,k=0;
-	while(i!=ll && j!=rl)
-	{
-		if(i==ll & j<rl)
-			a[k++]=a[j++];
-		else if(j==rl && i<ll)
-			a[k++]=a[i++];
-		else if(l[i]<r[j])
-			a[k++]=l[i++];
-		else
-			a[k++]=r[j++];
-	}
-	return;
+    int i=0,j=0,k=0;
+    while (i<lsize && j<rsize)
+    {
+        if (leftArr[i]<=rightArr[j])
+            a[k++]=leftArr[i++];
+        else
+            a[k++]=rightArr[j++];
+    }
+    while(i<lsize)
+        a[k++]=leftArr[i++];
+    while(j<rsize)
+        a[k++]=rightArr[j++];
 }
 
-void Sort(int a[],int s, int e)
+void MergeSort(int a[], int l, int r)
 {
-
-	int n=e-s+1;
-	for(int i=0;i<n;i++)
-		cout<<a[i]<<" ";
-	cout<<endl;
-	if(n<2)
-		return;
-	int mid=(n+1)>>1;
-	int ls[mid];
-	int rs[mid];
-	int las=0,ras=0;
-	for(int i=0;i<mid;i++){
-		ls[i]=a[i];las++;
-	}
-	for(int j=mid;j<n;j++){
-		rs[j-mid]=a[j];ras++;
-	}
-	Sort(ls,0,las);
-	Sort(rs,0,ras);
-	Merge(a,ls,rs,las,ras,n);
+    if(l<r)
+    {
+        int size=r-l+1;
+        int mid=size/2;
+        int l[mid], r[size-mid];
+        for(int i=0;i<mid;i++)
+            l[i]=a[i];
+        for(int i=mid;i<size;i++)
+            r[i-mid]=a[i];
+        MergeSort(l,0,mid-1);
+        MergeSort(r,mid,size-1);
+        Merge(a,l,r,size,mid,size-mid);
+    }
 }
 
 int main()
 {
-	int a[]={1,7,6,100,75,2,400,6,2,90};
-	Sort(a,0,sizeof(a)/sizeof(int)-1);
-	for(auto i:a)
-		cout<<i<<" ";
+    int n=7;
+    int a[]={1,7,3,4,7,1,8};
+    MergeSort(a,0,n-1);
+    for(int i=0;i<n;i++)
+        cout<<a[i]<<" ";
 }
-
