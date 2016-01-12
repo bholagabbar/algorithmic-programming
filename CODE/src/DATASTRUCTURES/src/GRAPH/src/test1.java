@@ -1,3 +1,4 @@
+package GRAPH.src;
 import java.io.*;
 import java.util.*;
 
@@ -11,24 +12,9 @@ class test1
     {
         InputReader in = new InputReader(System.in);
         OutputWriter out = new OutputWriter(System.out);
-        List<ArrayList<AbstractMap.SimpleEntry<Integer,Integer>>>gr=new ArrayList<ArrayList<AbstractMap.SimpleEntry<Integer, Integer>>>();//AbstractMap.SimpleEntry<Integer,Integer> is similar to pair<int a,int b> in C++
-        out.printLine("Please Enter no of Vertices");
-        int v=in.readInt();
-        out.printLine("Please Enter no of Edges");
-        int e=in.readInt();
-        for(int i=0;i<=v;i++)//Initializing rows for each vertex
-        {
-            gr.add(new ArrayList<AbstractMap.SimpleEntry<Integer, Integer>>());
-        }
-        out.printLine("Enter <Vertex> <Adjacent Vertex> <Weight>");
-        for(int i=0;i<e;i++)
-        {
-            int a=in.readInt();
-            int b=in.readInt();
-            int c=in.readInt();
-            //gr.get(a).add(new AbstractMap.SimpleEntry<Integer, Integer>(b,c));
-        }
-        out.printLine(gr);
+        out.print("1 ");
+        for(int i=1;i<100000;i++)
+            out.print("0 ");
         {
             out.close();
         }

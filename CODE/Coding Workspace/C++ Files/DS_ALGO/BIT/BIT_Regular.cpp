@@ -9,51 +9,48 @@ S 0 2
 #include <bits/stdc++.h>
 using namespace std;
 #define endl '\n'
+#define sz 100001
 
 //Created by Shreyans Sheth [bholagabbar]
 
 typedef long long int ll;
 
-long long BIT[1000005];
-int a[1000005];
-int N;
+int a[sz];
 
-void BuildBIT()
-{
-	fill_n(BIT,N,0); 
-	for(int i=1;i<=N;i++)
-	{
+//BIT Start
+
+ll BIT[sz]={0};
+
+void BuildBIT(int N) {
+	for(int i=1;i<=N;i++) {
 		ll value=a[i-1];
 		int k=i;
-		while(k<=N)
-		{
+		while(k<=N) {
 			BIT[k]+=value;
 			k+=(k & (-k));
 		}
 	}
 }
 
-ll QueryBIT(int b)	
-{
+ll QueryBIT(int b) {
 	ll sum = 0;
 	b+=1;
-	while(b>0)
-	{
+	while(b>0) {
 		sum+=BIT[b];
 		b-= (b & (-b));
 	}
 	return sum;
 }
 
-void UpdateBIT(int k, ll v) 
-{
+void UpdateBIT(int k, ll v, int N) {
 	k+=1;
-	while(k<=N)
-	{
+	while(k<=N) {
 		BIT[k] += v;
 		k+=(k & (-k));
 	}	
 }
+
+//BIT end
 
 int main()
 {

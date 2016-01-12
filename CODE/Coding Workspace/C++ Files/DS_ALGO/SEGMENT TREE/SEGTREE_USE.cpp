@@ -6,9 +6,10 @@
 using namespace std;
 #define sz 100005
 
+int arr[sz];
+
 int segtree[sz<<2];
 int lazy[sz<<2];
-int arr[sz];
 
 void buildSegTree(int node, int a, int b)
 {
@@ -53,7 +54,7 @@ void updateSegTree(int node, int a, int b, int i, int j, int val)
     segtree[node]=max(segtree[(node<<1)],segtree[(node<<1)+1]);
 }
 
-int rangeMaxQuery(int node, int a, int b, int i, int j)
+int querySegTree(int node, int a, int b, int i, int j)
 {
  
     if(a > b || a > j || b < i)
@@ -71,8 +72,9 @@ int rangeMaxQuery(int node, int a, int b, int i, int j)
     }
     if(a >= i && b <= j)
         return segtree[node];
-    return max(rangeMaxQuery((node<<1),a,(a+b)>>1,i,j), rangeMaxQuery((node<<1)+1,1+((a+b)>>1),b,i,j));
+    return max(querySegTree((node<<1),a,(a+b)>>1,i,j), querySegTree((node<<1)+1,1+((a+b)>>1),b,i,j));
 }
+
 int main()
 {
 	int n;
@@ -80,9 +82,9 @@ int main()
 	for(int i=0;i<n;i++)
 		cin>>arr[i];
 	buildSegTree(1,0,n-1);
-	cout<<rangeMaxQuery(1,0,n-1,0,4)<<endl;
-	cout<<rangeMaxQuery(1,0,n-1,2,5)<<endl;
+	cout<<querySegTree(1,0,n-1,0,4)<<endl;
+	cout<<querySegTree(1,0,n-1,2,5)<<endl;
 	updateSegTree(1,0,n-1,2,5,10);
-	cout<<rangeMaxQuery(1,0,n-1,2,5)<<endl;
+	cout<<querySegTree(1,0,n-1,2,5)<<endl;
 	return 0;
 }

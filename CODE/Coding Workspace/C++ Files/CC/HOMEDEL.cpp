@@ -1,63 +1,50 @@
-/*input
-4
-0 2 1 3
-1 0 4 5
-3 1 0 3
-1 1 1 0
-4
-0 2 1
-0 2 2
-3 1 2
-3 0 1
-*/
+//Shreyans Sheth [bholagabbar]
+ 
 #include <bits/stdc++.h>
 using namespace std;
+#define readFile freopen("E:/Shreyans/Documents/Coding Workspace/STDINPUT.txt","r",stdin);
+#define getPrecision(s,p) fixed<<setprecision(p)<<s
+#define boostIO ios_base::sync_with_stdio(0), cin.tie(0)
+#define CLR(s) memset(&s, 0, sizeof s)
+#define hashset unordered_set	//JAVA Feels :')
+#define hashmap unordered_map
+#define pb push_back
+#define mp make_pair
+#define sz 100001
+#define F first
+#define S second
 #define endl '\n'
-
-//Created by Shreyans Sheth [bholagabbar] using Sublime 3 and SublimeInput Plugin
-
-int a[251][251];
-
+ 
+typedef long long int ll;
+typedef long double ld;
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
+ 
+int dis[250][250];
+ 
+void FloydWarshall(int n)
+{
+	for(int k=0;k<n;k++)
+		for(int i=0;i<n;i++)
+			for(int j=0;j<n;j++)
+				if(i!=j && i!=k && j!=k && dis[i][k]+dis[k][j]<dis[i][j])
+					dis[i][j]=dis[i][k]+dis[k][j];
+}
+ 
 int main()
 {
-	ios_base::sync_with_stdio(false);//FAST IO
-	int n,m;
+	boostIO;
+	int n,m,s,g,d;
 	cin>>n;
-
-	//FLOYD WARSHALL
-
 	for(int i=0;i<n;i++)
-	{
 		for(int j=0;j<n;j++)
-		{
-			cin>>a[i][j];
-		}
-	}
-
-	for(int k=0;k<n;k++)
-	{
-		for(int i=0;i<n;i++)
-		{
-			for(int j=0;j<n;j++)
-			{
-				if(a[i][k]+a[k][j]<a[i][j])
-				{
-					a[i][j]=a[i][k]+a[k][j];
-				}
-			}
-		}
-	}
-
+			cin>>dis[i][j];
+	FloydWarshall(n);
 	cin>>m;
 	while(m--)
 	{
-		int s,g,d;
 		cin>>s>>g>>d;
-
-		int st=a[s][g]+a[g][d];
-		
-		cout<<st<<" "<<(st-a[s][d])<<endl;
+		cout<<dis[s][g]+dis[g][d]<<" "<<dis[s][g]+dis[g][d]-dis[s][d]<<endl;
 	}
-
 	return 0;
 }

@@ -9,21 +9,12 @@ class Edge //Struct to hold edges
 {
 public:
     int v1,v2,w;
+    Edge(){}
     Edge(int v1,int v2, int w)
     {
         this->v1=v1;
         this->v2=v2;
         this->w=w;
-    }
-    Edge(){}
-};
-
-class comparator //Comparator for priority queue
-{
-public:
-    bool operator()(const Edge &e1, const Edge &e2)
-    {
-        return e1.w>e2.w;
     }
 };
 
@@ -47,12 +38,13 @@ bool UNION(int x, int y)
 int main()
 {
     int n,v1,v2,e,m;
-    cin>>n;//number of vertices
-    cin>>m;//Number of edges
+    cin>>n; //number of vertices
+    cin>>m; //Number of edges
     u=new int[n+1];
-    for(int i=0;i<=n;i++)//Initilaizing DSU array
+    for(int i=0;i<=n;i++) //Initilaizing DSU array
         u[i]=i;
-    priority_queue<Edge,vector<Edge>,comparator> pq; //Maintains set of edges in ascending order
+    class comparator { public: bool operator()(const Edge &e1, const Edge &e2) { return e1.w>e2.w;}};// Comparator for Edges
+    priority_queue<Edge,vector<Edge>, comparator> pq; //Maintains set of edges in ascending order
     Edge edges[n-1]; //Maintains final set of edges
     for(int i=0;i<m;i++)
     {
@@ -70,6 +62,6 @@ int main()
     }
     cout<<"\nEdges are:\n";
     for(int i=0;i<n-1;i++) //Displaying final set of edges
-        cout<<(char)(edges[i].v1+64)<<" "<<(char)(edges[i].v2+64)<<" "<<edges[i].w<<endl;   
+        cout<<(char)(edges[i].v1+64)<<" "<<(char)(edges[i].v2+64)<<" "<<edges[i].w<<endl; //Printing as A,B,C etc
     return 0;
 }

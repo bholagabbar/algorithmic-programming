@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define endl '\n'
-#define endl '\n'
 #define pii pair<int,int>
 #define F first
 #define S second
@@ -15,18 +14,16 @@ vector<pii> a[100001];
 int Dijkstra(int s, int n)
 {
 	for(int i=0;i<=n;i++)
-		vis[i]=0, dis[i]=INT_MAX;
-	class prioritize{public: bool operator ()(pii&p1 ,pii&p2){return p1.S>p2.S;}};
-	priority_queue<pii, vector<pii> , prioritize> pq;
+		vis[i]=false, dis[i]=INT_MAX;
+	class prioritize{public: bool operator ()(pii &p1 ,pii &p2){return p1.S>p2.S;}};
+	priority_queue<pii, vector<pii>, prioritize> pq;
 	pq.push(mp(s,dis[s]=0));
 	while(!pq.empty())
 	{
-		pii cur=pq.top();
-		pq.pop();
+		pii cur=pq.top(); pq.pop();
 		int cv=cur.F,cw=cur.S;
-        if(vis[cv])
-            continue;
-		vis[cv]=1;
+        if(vis[cv]) continue;
+		vis[cv]=true;
 		for(pii x:a[cv])
 			if(!vis[x.F] && cw+x.S<dis[x.F])
 				pq.push(mp(x.F,dis[x.F]=cw+x.S));

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
 int partition(int a[], int l ,int r)
@@ -26,9 +25,9 @@ void quickSort(int a[], int l, int r)
 
 int main()
 {
-	int a[]={1,6,12,2,7,90,45,23};
+	int a[]={1,6,12,2,7,90,45,23,101,1,893,1236,390,1902,345,12,45};
 	int sz=sizeof(a)/sizeof(a[0]);
-	quickSort(a,0,sizeof(a)/sizeof(a[0]));
+	quickSort(a,0,sz);
 	for(int i:a)
 		cout<<i<<" ";
 }

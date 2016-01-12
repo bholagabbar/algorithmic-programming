@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CODE/src/CODEFORCES/src/Virtual/src/288_V/288_V.iml" filepath="$PROJECT_DIR$/CODE/src/CODEFORCES/src/Virtual/src/288_V/288_V.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/APRIL15/APRIL15.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/APRIL15/APRIL15.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/LOCAL_CONTESTS/CDBR2015/CDBR2015.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/LOCAL_CONTESTS/CDBR2015/CDBR2015.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/LOCAL_CONTESTS/CDER2015/CDER2015.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/LOCAL_CONTESTS/CDER2015/CDER2015.iml" />
@@ -19,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/COOK_OFFS/COOK60/COOK60.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/COOK_OFFS/COOK60/COOK60.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/COOK_OFFS/COOK61/COOK61.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/COOK_OFFS/COOK61/COOK61.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/COOK_OFFS/COOK63/COOK63.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/COOK_OFFS/COOK63/COOK63.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CODE/src/CODEFORCES/src/C_Practice/C_Practice.iml" filepath="$PROJECT_DIR$/CODE/src/CODEFORCES/src/C_Practice/C_Practice.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/DATASTRUCTURES/DATASTRUCTURES.iml" filepath="$PROJECT_DIR$/CODE/src/DATASTRUCTURES/DATASTRUCTURES.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/LOCAL_CONTESTS/DCL15/DCL15.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/LOCAL_CONTESTS/DCL15/DCL15.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_217/DIV2_217.iml" filepath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_217/DIV2_217.iml" />
@@ -27,6 +29,8 @@
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_329/DIV2_329.iml" filepath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_329/DIV2_329.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_330/DIV2_330.iml" filepath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_330/DIV2_330.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_332/DIV2_332.iml" filepath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_332/DIV2_332.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_335/DIV2_335.iml" filepath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_335/DIV2_335.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_337/DIV2_337.iml" filepath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV2_337/DIV2_337.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV_2-299/DIV_2-299.iml" filepath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV_2-299/DIV_2-299.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV_2-309/DIV_2-309.iml" filepath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV_2-309/DIV_2-309.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODEFORCES/DIV_2-312/DIV_2-312.iml" filepath="$PROJECT_DIR$/CODE/src/CODEFORCES/DIV_2-312/DIV_2-312.iml" />
@@ -44,8 +48,10 @@
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/LOCAL_CONTESTS/EXCU2015/EXCU2015.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/LOCAL_CONTESTS/EXCU2015/EXCU2015.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/FEB15/FEB15.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/FEB15/FEB15.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/MISC/Facebook Hacker Cup '14/Facebook Hacker Cup '14.iml" filepath="$PROJECT_DIR$/CODE/src/MISC/Facebook Hacker Cup '14/Facebook Hacker Cup '14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CODE/src/CODEFORCES/GOODBYE2015/GOODBYE2015.iml" filepath="$PROJECT_DIR$/CODE/src/CODEFORCES/GOODBYE2015/GOODBYE2015.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/MISC/GOOGLE_CODE_JAM'15/GOOGLE_CODE_JAM'15.iml" filepath="$PROJECT_DIR$/CODE/src/MISC/GOOGLE_CODE_JAM'15/GOOGLE_CODE_JAM'15.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/LOCAL_CONTESTS/HUMP15R/HUMP15R.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/LOCAL_CONTESTS/HUMP15R/HUMP15R.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/JAN16/JAN16.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/JAN16/JAN16.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/JULY15/JULY15.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/JULY15/JULY15.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/JUNE15/JUNE15.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/JUNE15/JUNE15.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/MAR15/MAR15.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/MAR15/MAR15.iml" />
@@ -60,6 +66,7 @@
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/SEPT15/SEPT15.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/LONG_CHALLENGE/SEPT15/SEPT15.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/SPOJ/SPOJ.iml" filepath="$PROJECT_DIR$/CODE/src/SPOJ/SPOJ.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/TOPCODER/TOPCODER.iml" filepath="$PROJECT_DIR$/CODE/src/TOPCODER/TOPCODER.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CODE/src/CODEFORCES/src/Virtual/Virtual.iml" filepath="$PROJECT_DIR$/CODE/src/CODEFORCES/src/Virtual/Virtual.iml" />
       <module fileurl="file://$PROJECT_DIR$/CODE/src/CODECHEF/LOCAL_CONTESTS/XCPT2015/XCPT2015.iml" filepath="$PROJECT_DIR$/CODE/src/CODECHEF/LOCAL_CONTESTS/XCPT2015/XCPT2015.iml" />
     </modules>
   </component>
