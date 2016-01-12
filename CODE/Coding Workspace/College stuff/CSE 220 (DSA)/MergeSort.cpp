@@ -41,4 +41,8 @@ int main()
     MergeSort(a,0,n-1);
     for(int i=0;i<n;i++)
         cout<<a[i]<<" ";
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ea1fe64cc3715c94504a2b632613279521c9f48c
