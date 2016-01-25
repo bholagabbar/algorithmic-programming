@@ -1,16 +1,28 @@
 /*input
-7
-2 3 6 7 8 9 20
+2
+5 3
+78 1 22 12 3
+1 2
+3 5
+4 4
+1 1
+10
+1 1
 */
 #include <bits/stdc++.h>
 using namespace std;
 #define sz 100005
-
+#define PI(x) printf("%d", x)
+#define PL(x) printf("%lld", x)
+#define SI(x) scanf("%d", &x)
+#define SD(x) scanf("%lf", &x)
+#define SL(x) scanf("%lld", &x)
+ 
 int arr[sz];
-
+ 
 int segTree[sz<<2];
 int lazy[sz<<2];
-
+ 
 void buildSegTree(int node, int a, int b) {
     if(a > b) {
         return;
@@ -21,9 +33,9 @@ void buildSegTree(int node, int a, int b) {
     }
     buildSegTree((node << 1), a, (a + b) >> 1);
     buildSegTree((node << 1) + 1, 1+((a + b) >> 1), b);
-    segTree[node] = std::max(segTree[node << 1], segTree[(node << 1) + 1]);
+    segTree[node] = std::min(segTree[node << 1], segTree[(node << 1) + 1]);
 }
-
+ 
 void updateSegTree(int node, int a, int b, int i, int j, int val) {
  
     if(lazy[node] != 0) {
@@ -47,13 +59,13 @@ void updateSegTree(int node, int a, int b, int i, int j, int val) {
     }
     updateSegTree(node << 1, a, (a + b) >> 1, i, j, val);
     updateSegTree((node << 1) + 1, 1 + ((a + b) >> 1), b, i, j, val);
-    segTree[node] = std::max(segTree[node << 1], segTree[(node << 1) + 1]);
+    segTree[node] = std::min(segTree[node << 1], segTree[(node << 1) + 1]);
 }
-
+ 
 int querySegTree(int node, int a, int b, int i, int j) {
  
     if(a > b || a > j || b < i) {
-        return INT_MIN;
+        return INT_MAX;
     }
     if(lazy[node] != 0) {
         segTree[node] += lazy[node];
@@ -66,20 +78,27 @@ int querySegTree(int node, int a, int b, int i, int j) {
     if(a >= i && b <= j) {
         return segTree[node];
     }
-    return std::max(querySegTree((node << 1), a, (a+b) >> 1, i, j), querySegTree((node << 1) + 1, 1 + ((a + b) >> 1), b, i, j));
+    return std::min(querySegTree((node << 1), a, (a+b) >> 1, i, j), querySegTree((node << 1) + 1, 1 + ((a + b) >> 1), b, i, j));
 }
-
+ 
 int main()
 {
-	int n;
-	cin>>n;
-	for(int i=0;i<n;i++){
-		cin>>arr[i];
+    int notc;
+    SI(notc);
+    for (int t = 1; t <= notc; t++) {
+        int n, q;
+        SI(n), SI(q);
+        for (int i = 0; i < n; i++) {
+            SI(arr[i]);
+        }
+        buildSegTree(1, 0, n-1);
+        printf("Case %d:\n", t);
+        while (q--) {
+            int l ,r;
+            SI(l), SI(r);
+            PI(querySegTree(1, 0 ,n-1, l-1 ,r-1));
+            printf("\n");
+        }
     }
-	buildSegTree(1,0,n-1);
-	cout<<querySegTree(1,0,n-1,0,4)<<endl;
-	cout<<querySegTree(1,0,n-1,2,5)<<endl;
-	updateSegTree(1,0,n-1,2,5,10);
-	cout<<querySegTree(1,0,n-1,2,5)<<endl;
-	return 0;
+    return 0;
 }

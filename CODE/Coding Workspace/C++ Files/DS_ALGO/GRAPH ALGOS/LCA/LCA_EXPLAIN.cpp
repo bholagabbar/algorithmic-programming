@@ -1,4 +1,4 @@
-/ Algorithm for finding the lowest common ancestor of two nodes in a tree
+// Algorithm for finding the lowest common ancestor of two nodes in a tree
 // with O(N log N) preprocessing and O(log N) query time
 
 #include <bits/stdc++.h>

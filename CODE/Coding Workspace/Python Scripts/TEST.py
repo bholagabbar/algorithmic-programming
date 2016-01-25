@@ -1,4 +1,10 @@
-s=input().split(" ")
-a=int(s[0])
-b=int(s[1])
-print((a+b))
+import urllib2
+def main():
+
+  webUrl=urllib2.urlopen("http://kamalthakur.com")
+  print ("result code: "+str(webUrl.getcode()))
+  data=webUrl.read()
+  print (data)
+
+if __name__ == "__main__":
+  main()

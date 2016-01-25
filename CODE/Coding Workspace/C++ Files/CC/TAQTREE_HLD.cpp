@@ -10,14 +10,14 @@
 2 5 3
 */
 //Shreyans Sheth [bholagabbar]
- 
+
 #include <bits/stdc++.h>
 using namespace std;
-#define readFile freopen("E:/Shreyans/Documents/Coding Workspace/STDINPUT.txt","v",stdin);
+#define readFile freopen("E:/Shreyans/Documents/Coding Workspace/STDINPUT.txt","r",stdin);
 #define getPrecision(s,p) fixed<<setprecision(p)<<s
 #define boostIO ios_base::sync_with_stdio(0), cin.tie(0)
 #define CLR(s) memset(&s, 0, sizeof s)
-#define hashset unordered_set
+#define hashset unordered_set    //JAVA Feels :')
 #define hashmap unordered_map
 #define pb push_back
 #define mp make_pair
@@ -26,36 +26,36 @@ using namespace std;
 #define F first
 #define S second
 #define endl '\n'
- 
+
 typedef long long int ll;
 typedef long double ld;
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
- 
+
 template <typename T>
 T sum(T t1, T t2) {
     return t1 + t2;
 }
 
-vector<int> adj[N];
-vector<int> edges[N];
-vector<int> idx[N];
- 
-int subSize[N];
-int depth[N];
- 
-int lca[LN][N];
- 
-int segTree[N<<2];
-int lazy[N<<2];
- 
-int pos;
-int chainNo;
-int chainHead[N];
-int chainIndex[N];
-int arr[N];
-int basePos[N];
-int endNode[N];
+vector<int> adj[N];  //adj list
+int subSize[N];  //size of the subtree rooted at i
+int depth[N];  //depth from root
+
+vector<int> edges[N]; //cost of edges
+vector<int> idx[N]; //Indexes of edges
+
+int lca[LN][N]; //for LCA
+
+int segTree[N<<3]; //segTree
+int lazy[N<<3] = {0}; //lazy propogation (not needed here, just part of segtree implementation)
+
+int pos; //order in Dfs
+int chainNo; //current chain number
+int chainHead[N]; //stores the head of the head
+int chainIndex[N]; //index of the current chain
+int arr[N]; //Base array for segTree
+int basePos[N]; //store the position of the node in arr
+int endNode[N]; //store the node at the other end of the edge
 
 void Dfs(int node, int parent, int level) {
     depth[node] = level;
@@ -71,8 +71,8 @@ void Dfs(int node, int parent, int level) {
         }
     }
 }
- 
-void setupLCA(int n)
+
+void initializeLCA(int n)
 {
     for (int j = 1; j < LN; j++) {
         for (int i = 1; i <= n; i++) {
@@ -80,7 +80,7 @@ void setupLCA(int n)
         }
     }
 }
- 
+
 int LCA(int x, int y)
 {
     if (depth[x] < depth[y]) {
@@ -102,19 +102,20 @@ int LCA(int x, int y)
     }
     return lca[0][x];
 }
- 
+
 void heavyLightDecomposition(int node, int cost, int parent) {
     if (chainHead[chainNo] == -1) {
         chainHead[chainNo] = node;
     }
+    pos++;
     chainIndex[node] = chainNo;
     basePos[node] = pos;
-    arr[pos++] = cost;
+    arr[pos] = cost;
     int specialChild = -1, edgeCost = 0;
     int x = adj[node].size();
     while (x--) {
         int next = adj[node][x];
-        if (next != parent){
+        if (next != parent) {
             if (specialChild == -1 || subSize[next] > subSize[specialChild]) {
                 specialChild = next;
                 edgeCost = edges[node][x];
@@ -133,7 +134,7 @@ void heavyLightDecomposition(int node, int cost, int parent) {
         }
     }
 }
- 
+
 void buildSegTree(int node, int a, int b) {
     if(a > b) {
         return;
@@ -176,7 +177,7 @@ void updateSegTree(int node, int a, int b, int i, int j, int val) {
 int querySegTree(int node, int a, int b, int i, int j) {
  
     if(a > b || a > j || b < i) {
-        return INT_MIN;
+        return 0;
     }
     if(lazy[node] != 0) {
         segTree[node] = lazy[node];
@@ -191,31 +192,31 @@ int querySegTree(int node, int a, int b, int i, int j) {
     }
     return sum(querySegTree((node << 1), a, (a+b) >> 1, i, j), querySegTree((node << 1) + 1, 1 + ((a + b) >> 1), b, i, j));
 }
- 
-int queryUp(int u, int v) {
-    if (u == v) {
+
+int queryUp(int l, int r) {
+    if (l == r) {
         return 0;
     }
-    int lchain, rchain = chainIndex[v];
+    int lchain, rchain = chainIndex[r];
     int ans = 0;
     while (1) {
-        lchain = chainIndex[u];
+        lchain = chainIndex[l];
         if (lchain == rchain) {
-            if (u == v) {
+            if (l == r) {
                 break;
             }
-            int temp = querySegTree(1, 1, pos, basePos[v]+1, basePos[u]);
-            ans = ans+temp;
+            int currAns = querySegTree(1, 1, pos, basePos[r]+1, basePos[l]);
+            ans = sum(ans, currAns);
             break;
         }
-        int temp = querySegTree(1, 1, pos, basePos[chainHead[lchain]], basePos[u]);
-        ans = ans+temp;
-        u = chainHead[lchain];
-        u = lca[0][u];
+        int currAns = querySegTree(1, 1, pos, basePos[chainHead[lchain]], basePos[l]);
+        ans = sum(ans, currAns);
+        l = chainHead[lchain];
+        l = lca[0][l];
     }
     return ans;
 }
- 
+
 void setup(int n) {
     for (int i = 0;i <= n;i++) {
         adj[i].clear();
@@ -227,20 +228,21 @@ void setup(int n) {
         }
     }
 }
- 
-int queryPathSum(int u, int v) {
-    int lca = LCA(u, v);
-    int a = queryUp(u, lca);
-    int b = queryUp(v, lca);
+
+int queryPathSum(int l, int r){
+    int lca = LCA(l, r);
+    int a = queryUp(l, lca);
+    int b = queryUp(r, lca);
     return sum(a, b);
 }
- 
-void updateEdge(int i, int val) {
-    int node = endNode[i];
+
+void updateEdge(int indice,int val){
+    int node = endNode[indice];
     updateSegTree(1, 1, pos, basePos[node], basePos[node], val);
 }
- 
-int main() {
+
+int main()
+{
     boostIO;
     int n;
     cin >> n;
@@ -256,22 +258,22 @@ int main() {
         idx[v2].pb(i);
     }
     pos = 1;
-    Dfs(1,0,1);
-    setupLCA(n);
+    Dfs(1,0,0);
+    initializeLCA(n);
+    pos = -1;
     chainNo = 1;
     heavyLightDecomposition(1,0,0);
-    pos--;
     buildSegTree(1, 1, pos);
     int q;
     cin >> q;
     while (q--) {
-        int type, u ,v;
-        cin >> type >> u >> v;
+        int type, l ,r;
+        cin >> type >> l >> r;
         if (type == 2) {
-            cout << queryPathSum(u, v) << endl;
+            cout << queryPathSum(l, r) << endl;
         } else {
-            updateEdge(u, v);
+            updateEdge(l, r);
         }
     }
     return 0;
-}  
+} 

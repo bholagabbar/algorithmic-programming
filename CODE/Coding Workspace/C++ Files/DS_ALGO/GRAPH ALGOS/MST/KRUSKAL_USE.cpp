@@ -37,33 +37,33 @@ public:
 int u[100001];
 int r[100001];
 
-inline int FIND(int x)
-{
-    if(u[x]!=u[u[x]])
+inline int FIND(int x) {
+    if(u[x]!=u[u[x]]) {
         u[x]=FIND(u[x]);
+    }
     return u[x];
 }
 
-bool UNION (int x, int y)
-{   
-    int px=FIND(x),py=FIND(y);
-    if(px==py)
+bool UNION (int x, int y) {
+    int px=FIND(x), py=FIND(y);
+    if(px==py) {
         return false;
-
-    if(r[px]>r[py])
+    }
+    if(r[px]>r[py]) {
         swap(px,py);
-
-    else if(r[px]==r[py])
+    }
+    else if(r[px]==r[py]) {
         r[py]++;
-
+    }
     u[px]=py;
     return true;
 }
 
-void initializeDSU(int l)
-{
-    for(int i=1;i<=l;i++)
-        u[i]=i, r[i]=1;
+void initializeDSU(int l) {
+    for(int i=1;i<=l;i++) {
+        u[i]=i;
+        r[i]=1;
+    }
 }
 
 int main()
