@@ -11,60 +11,55 @@ bool vis[100001];
 int dis[100001];
 vector<pii> a[100001];
 
-int Dijkstra(int s, int n)
-{
-	for(int i=0;i<=n;i++)
-<<<<<<< HEAD
-		vis[i]=false, dis[i]=INT_MAX;
-	class prioritize{public: bool operator ()(pii &p1 ,pii &p2){return p1.S>p2.S;}};
+class prioritize {
+	public: bool operator ()(pii &p1 ,pii &p2) {
+		return p1.S>p2.S;
+	}
+};
+
+int Dijkstra(int s, int n) {
+	for (int i = 0;i <= n; i++) {
+		vis[i] = false;
+		dis[i] = INT_MAX;
+	}
 	priority_queue<pii, vector<pii>, prioritize> pq;
-=======
-		vis[i]=0, dis[i]=INT_MAX;
-	class prioritize{public: bool operator ()(pii&p1 ,pii&p2){return p1.S>p2.S;}}; //Comparator
-	priority_queue<pii, vector<pii> , prioritize> pq;
->>>>>>> ea1fe64cc3715c94504a2b632613279521c9f48c
-	pq.push(mp(s,dis[s]=0));
-	while(!pq.empty())
-	{
-		pii cur=pq.top(); pq.pop();
-		int cv=cur.F,cw=cur.S;
-<<<<<<< HEAD
-        if(vis[cv]) continue;
-		vis[cv]=true;
-=======
+	pq.push(mp(s, dis[s]=0));
+	while(!pq.empty()) {
+		pii cur = pq.top(); pq.pop();
+		int cv = cur.F, cw = cur.S;
         	if(vis[cv]) continue;
-		vis[cv]=1;
->>>>>>> ea1fe64cc3715c94504a2b632613279521c9f48c
-		for(pii x:a[cv])
-			if(!vis[x.F] && cw+x.S<dis[x.F])
+		vis[cv] = true;
+		for(pii x : a[cv]) {
+			if(!vis[x.F] && (cw + x.S) < dis[x.F]) {
 				pq.push(mp(x.F,dis[x.F]=cw+x.S));
+			}
+		}
 	}
 }
 
-int main()
-{
+int main() {
 	int tc;
 	cin>>tc;
-	while(tc--)
-	{
-		int v1,v2,w,n,m;
-		cin>>n>>m;
-		for(int i=0;i<=n;i++)
+	while(tc--) {
+		int v1, v2, w, n, m;
+		cin >> n >> m;
+		for(int i = 0; i <= n; i++) {
 			a[i].clear();
-		for(int i=0;i<m;i++)
-		{
-			cin>>v1>>v2>>w;
-			a[v1].pb(mp(v2,w));
+		}
+		for(int i = 0; i < m; i++) {
+			cin >> v1 >> v2 >> w;
+			a[v1].pb(mp(v2, w));
 		}
 		int s;
 		cin>>s;
 		Dijkstra(s,n);
-		for(int i=1;i<=n;i++)
-		{
-			if(dis[i]!=INT_MAX)
+		for(int i = 1; i <= n; i++) {
+			if(dis[i]!=INT_MAX) {
 				cout<<dis[i]<<" ";
-			else
+			} else {
 				cout<<"-1 ";
+			}
 		}
-	}			
+	}
+	return 0;	
 }
