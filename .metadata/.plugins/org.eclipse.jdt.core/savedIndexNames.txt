@@ -1,2 +1,0 @@
-INDEX VERSION 1.127+E:\Shreyans\Documents\CodeChef IntelliJ\.metadata\.plugins\org.eclipse.jdt.core
-886750864.index
