@@ -1,4 +1,12 @@
-package DSA;import java.io.*;
+package DSA;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.InputMismatchException;
 
 /**
@@ -6,15 +14,15 @@ import java.util.InputMismatchException;
  */
 
 class PAIR {
-
+	
 	static class Pair implements Comparable<Pair> {
 		int first, second;
-
+		
 		Pair(int first, int second) {
 			this.first = first;
 			this.second = second;
 		}
-
+		
 		@Override
 		public int compareTo(Pair o1) {
 			if (o1.first != this.first) {
@@ -23,7 +31,7 @@ class PAIR {
 			return this.second - o1.second;
 		}
 	}
-
+	
 	public static void main(String[] args) throws Exception {
 		//System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/SPOJ/Stdin_File_Read.txt"));
 		InputReader in = new InputReader(System.in);

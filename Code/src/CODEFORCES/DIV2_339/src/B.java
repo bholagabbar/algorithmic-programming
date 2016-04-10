@@ -1,5 +1,10 @@
-import java.io.*;
-import java.math.BigInteger;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.InputMismatchException;
 
 /**
@@ -12,9 +17,9 @@ public class B {
 		InputReader in = new InputReader(System.in);
 		OutputWriter out = new OutputWriter(System.out);
 		int n = in.readInt();
-		String other="";
+		String other = "";
 		long fZ = 0;
-		for(int i = 0; i < n; i++) {
+		for (int i = 0; i < n; i++) {
 			String s = in.readString();
 			if (s.charAt(0) == '0') {
 				out.printLine("0");
@@ -23,7 +28,7 @@ public class B {
 				int zeroHere = 0;
 				boolean flag = false;
 				for (int j = 1; j < s.length(); j++) {
-					if(s.charAt(j) == '0') {
+					if (s.charAt(j) == '0') {
 						zeroHere++;
 					} else {
 						other = s;

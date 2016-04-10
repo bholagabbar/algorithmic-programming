@@ -1,4 +1,12 @@
-package CODECHEF.LONG_CHALLENGE.JAN16.src;import java.io.*;
+package CODECHEF.LONG_CHALLENGE.JAN16.src;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.HashSet;
 import java.util.InputMismatchException;
 
@@ -7,23 +15,23 @@ import java.util.InputMismatchException;
  */
 
 class CBALLS {
-
-	static int sz= 100001;
+	
+	static int sz = 100001;
 	static int[] prime = new int[sz];
-
+	
 	static void primeFactorSieve() {
 		for (int i = 1; i < sz; i++) {
 			prime[i] = i;
 		}
-		for (int i = 2; i*i < sz; i++) {
+		for (int i = 2; i * i < sz; i++) {
 			if (prime[i] == i) {
-				for (int j = i*i; j < sz; j += i) {
+				for (int j = i * i; j < sz; j += i) {
 					prime[j] = i;
 				}
 			}
 		}
 	}
-
+	
 	public static void main(String[] args) throws Exception {
 		//System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/SPOJ/Stdin_File_Read.txt"));
 		InputReader in = new InputReader(System.in);
@@ -37,7 +45,7 @@ class CBALLS {
 				a[i] = in.readInt();
 			}
 			HashSet<Integer> primeFactors = new HashSet<Integer>();
-			for(int i =0; i < n; i++) {
+			for (int i = 0; i < n; i++) {
 				int curr = a[i];
 				while (curr > prime[curr]) {
 					primeFactors.add(prime[curr]);
@@ -57,23 +65,25 @@ class CBALLS {
 					prev = currPrime;
 				} else {
 					prev = a[0];
-					if(a[0] % currPrime != 0) {
-						int factor=a[0] / currPrime;
-						prev = currPrime * (factor+1);
+					if (a[0] % currPrime != 0) {
+						int factor = a[0] / currPrime;
+						prev = currPrime * (factor + 1);
 					}
 					toAdd += prev - a[0];
 				}
 				for (int i = 1; i < n; i++) {
-					if (toAdd > min) break;
+					if (toAdd > min) {
+						break;
+					}
 					int currValue = a[i];
 					if (currValue < prev) {
 						toAdd += prev - currValue;
 						currValue = prev;
 					}
-					int was=currValue;
-					if(currValue % currPrime != 0) {
-						int factor= currValue / currPrime;
-						currValue = currPrime * (factor+1);
+					int was = currValue;
+					if (currValue % currPrime != 0) {
+						int factor = currValue / currPrime;
+						currValue = currPrime * (factor + 1);
 					}
 					toAdd += currValue - was;
 					prev = currValue;

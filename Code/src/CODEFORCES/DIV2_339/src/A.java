@@ -1,4 +1,10 @@
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.Writer;
 import java.math.BigInteger;
 import java.util.InputMismatchException;
 import java.util.Set;
@@ -9,9 +15,9 @@ import java.util.TreeSet;
  */
 
 public class A {
-
+	
 	static TreeSet<BigInteger> powers = new TreeSet<BigInteger>();
-
+	
 	static void preComputePowers(BigInteger r, BigInteger k) {
 		BigInteger start = BigInteger.ONE;
 		while (start.compareTo(r) <= 0) {
@@ -19,25 +25,25 @@ public class A {
 			start = start.multiply(k);
 		}
 	}
-
+	
 	public static void main(String[] args) throws Exception {
 		//System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/SPOJ/Stdin_File_Read.txt"));
 		InputReader in = new InputReader(System.in);
 		OutputWriter out = new OutputWriter(System.out);
-		BigInteger l = new BigInteger(in.readString()), r=new BigInteger(in.readString());
+		BigInteger l = new BigInteger(in.readString()), r = new BigInteger(in.readString());
 		BigInteger k = new BigInteger(in.readString());
 		if (k.equals(BigInteger.ONE)) {
 			out.printLine("1");
 			return;
 		}
 		preComputePowers(r, k);
-		Set<BigInteger> printAnswer = powers.subSet(l ,r.add(BigInteger.ONE));
+		Set<BigInteger> printAnswer = powers.subSet(l, r.add(BigInteger.ONE));
 		if (printAnswer.size() == 0) {
 			out.printLine("-1");
 			return;
 		}
-		for(BigInteger x : printAnswer) {
-			out.print(x+" ");
+		for (BigInteger x : printAnswer) {
+			out.print(x + " ");
 		}
 	}
 	

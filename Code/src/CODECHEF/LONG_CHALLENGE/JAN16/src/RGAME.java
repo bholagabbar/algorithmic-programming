@@ -1,4 +1,12 @@
-package CODECHEF.LONG_CHALLENGE.JAN16.src;import java.io.*;
+package CODECHEF.LONG_CHALLENGE.JAN16.src;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.InputMismatchException;
 
 /**
@@ -10,21 +18,21 @@ class RGAME {
 		//System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/SPOJ/Stdin_File_Read.txt"));
 		InputReader in = new InputReader(System.in);
 		OutputWriter out = new OutputWriter(System.out);
-		final long MOD = (long)1e9+7;
+		final long MOD = (long) 1e9 + 7;
 		long tc = in.readInt();
-		long  pre, pow2;
+		long pre, pow2;
 		while (tc-- > 0) {
 			int n = in.readInt();
-			long[] a = new long[n+1];
-			long[] dp = new long [n+1];
+			long[] a = new long[n + 1];
+			long[] dp = new long[n + 1];
 			for (int i = 0; i <= n; i++) {
 				a[i] = in.readLong();
 			}
-			dp[1] = a[0]*a[1] + a[1]*a[0];
-			pre = 2* (a[0] + a[1]);
+			dp[1] = a[0] * a[1] + a[1] * a[0];
+			pre = 2 * (a[0] + a[1]);
 			pow2 = 4;
 			for (int i = 2; i <= n; i++) {
-				dp[i] = (2 * (dp[i-1] % MOD) + (a[i] % MOD * pre % MOD) % MOD) % MOD;
+				dp[i] = (2 * (dp[i - 1] % MOD) + (a[i] % MOD * pre % MOD) % MOD) % MOD;
 				pre = (pre % MOD + (pow2 % MOD * a[i] % MOD) % MOD) % MOD;
 				pow2 = (pow2 % MOD * 2) % MOD;
 			}

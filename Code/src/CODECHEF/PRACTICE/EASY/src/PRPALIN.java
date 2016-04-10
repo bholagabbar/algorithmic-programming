@@ -1,29 +1,24 @@
-package CODECHEF.PRACTICE.EASY.src;import java.io.BufferedReader;
+package CODECHEF.PRACTICE.EASY.src;
+
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
  * Created by Shreyans on 11/22/2014 in IntelliJ
  */
-class PRPALIN
-    {
-    public static void main(String[] args) throws IOException
-        {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
-        boolean isprimef[]=SOE();
-        if(n>98689)
-            {
-            System.out.println(1003001);
-            }
-        else
-            {
-            for (int i = n; i <=98689; i++)
-            {
-            if (isprimef[i - 1])
-                {
-                //ALTERNATE CONVENTIONAL REVERSING TECHNIQUE WITH A SLIGHTLY FASTER RUNTIME
-                     /*  int t = i;
+class PRPALIN {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int n = Integer.parseInt(br.readLine());
+		boolean isprimef[] = SOE();
+		if (n > 98689) {
+			System.out.println(1003001);
+		} else {
+			for (int i = n; i <= 98689; i++) {
+				if (isprimef[i - 1]) {
+					//ALTERNATE CONVENTIONAL REVERSING TECHNIQUE WITH A SLIGHTLY FASTER RUNTIME
+	                 /*  int t = i;
                     int rev = 0;
                     while (t != 0)
                         {
@@ -36,39 +31,38 @@ class PRPALIN
                         System.out.println(i);
                         break;
                         }*/
-                StringBuffer a1=new StringBuffer();
-                a1.append(Integer.toString(i));
-                if(String.valueOf(a1).compareTo(String.valueOf(a1.reverse()))==0)
-                    {
-                    System.out.print(a1);
-                    break;
-                    }
-                }
-            }
-            }
-        }
-        public static boolean[] SOE()
-        {
-            int max=10000001;
-            final boolean[] primeCandidates = new boolean[max]; // defaults to false
-            for (int i = 2; i < max; i++) {
-                primeCandidates[i] = true;
-            }
+					StringBuffer a1 = new StringBuffer();
+					a1.append(Integer.toString(i));
+					if (String.valueOf(a1).compareTo(String.valueOf(a1.reverse())) == 0) {
+						System.out.print(a1);
+						break;
+					}
+				}
+			}
+		}
+	}
+	
+	public static boolean[] SOE() {
+		int max = 10000001;
+		final boolean[] primeCandidates = new boolean[max]; // defaults to false
+		for (int i = 2; i < max; i++) {
+			primeCandidates[i] = true;
+		}
+		
+		final double maxRoot = Math.sqrt(max);
+		for (int candidate = 2; candidate < maxRoot; candidate++) {
+			if (primeCandidates[candidate]) {
+				for (int j = 2 * candidate; j < max; j += candidate) {
+					primeCandidates[j] = false;
+				}
+			}
+			
+		}
+		return primeCandidates;
+	}
+}
 
-            final double maxRoot = Math.sqrt(max);
-            for (int candidate = 2; candidate < maxRoot; candidate++) {
-                if (primeCandidates[candidate]) {
-                    for (int j = 2 * candidate; j < max; j += candidate) {
-                        primeCandidates[j] = false;
-                    }
-                }
-
-            }
-            return primeCandidates;
-        }
-    }
-
-    //SIEVE OF ATKINS NOT WORKING
+//SIEVE OF ATKINS NOT WORKING
     /*import java.util.Arrays;
 
 class SieveOfAtkin

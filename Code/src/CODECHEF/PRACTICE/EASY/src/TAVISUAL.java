@@ -1,4 +1,6 @@
-package CODECHEF.PRACTICE.EASY.src;import java.io.BufferedReader;
+package CODECHEF.PRACTICE.EASY.src;
+
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -6,34 +8,29 @@ import java.io.InputStreamReader;
  * Created by Shreyans on 1/8/2015 using IntelliJ IDEA
  */
 
-class TAVISUAL
-{
-    public static void main(String[] args) throws IOException
-    {
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        StringBuffer sb=new StringBuffer();
-        int t=Integer.parseInt(br.readLine());
-        for(int i=0;i<t;i++)
-        {
-            String []s=br.readLine().split(" ");
-            //int n=Integer.parseInt(s[0]);
-            int cp=Integer.parseInt(s[1]);
-            int nf=Integer.parseInt(s[2]);
-            for(int j=0;j<nf;j++)
-            {
-                //System.out.println(cp);
-                String[] x=br.readLine().split(" ");
-                int p1=Integer.parseInt(x[0]);
-                int p2=Integer.parseInt(x[1]);
-                if(cp>=p1&&cp<=p2)
-                {
-                    cp = p2 - (cp-p1);
-                }
-            }
-            sb.append(cp+"\n");
-        }
-        System.out.println(sb);
-    }
+class TAVISUAL {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuffer sb = new StringBuffer();
+		int t = Integer.parseInt(br.readLine());
+		for (int i = 0; i < t; i++) {
+			String[] s = br.readLine().split(" ");
+			//int n=Integer.parseInt(s[0]);
+			int cp = Integer.parseInt(s[1]);
+			int nf = Integer.parseInt(s[2]);
+			for (int j = 0; j < nf; j++) {
+				//System.out.println(cp);
+				String[] x = br.readLine().split(" ");
+				int p1 = Integer.parseInt(x[0]);
+				int p2 = Integer.parseInt(x[1]);
+				if (cp >= p1 && cp <= p2) {
+					cp = p2 - (cp - p1);
+				}
+			}
+			sb.append(cp + "\n");
+		}
+		System.out.println(sb);
+	}
 }
 
 

@@ -1,5 +1,16 @@
-package CODECHEF.LONG_CHALLENGE.JAN16.src;import java.io.*;
-import java.util.*;
+package CODECHEF.LONG_CHALLENGE.JAN16.src;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.Writer;
+import java.util.HashSet;
+import java.util.InputMismatchException;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Created by Shreyans Sheth [bholagabbar] on 1/6/2016 at 1:28 PM using IntelliJ IDEA (Fast IO Template)
@@ -7,15 +18,16 @@ import java.util.*;
 
 class DEVPERF {
 	
-	static final int N=1001;
+	static final int N = 1001;
 	
 	static char grid[][] = new char[N][N];
-	static int dx[] = {1,-1,0,0,-1,-1,1,1};
-	static int dy[] = {0,0,1,-1,-1,1,1,-1};
-	static int dist[][] =new int[N][N];
+	static int dx[] = {1, -1, 0, 0, -1, -1, 1, 1};
+	static int dy[] = {0, 0, 1, -1, -1, 1, 1, -1};
+	static int dist[][] = new int[N][N];
 	
 	static class Pair {
 		int first, second;
+		
 		Pair(int first, int second) {
 			this.first = first;
 			this.second = second;
@@ -23,14 +35,13 @@ class DEVPERF {
 	}
 	
 	static int getMaxTimeUsingBFS(int s1, int s2, int r, int c) {
-		boolean vis[][] = new boolean[r+1][c+1];
+		boolean vis[][] = new boolean[r + 1][c + 1];
 		dist[s1][s2] = 1;
 		vis[s1][s2] = true;
 		int maxDistance = 1;
 		Queue<Pair> q = new LinkedList<Pair>();
 		q.add(new Pair(s1, s2));
-		while (!q.isEmpty())
-		{
+		while (!q.isEmpty()) {
 			Pair curr = q.poll();
 			int c1 = curr.first;
 			int c2 = curr.second;
@@ -38,11 +49,11 @@ class DEVPERF {
 			if (grid[c1][c2] == '*') {
 				maxDistance = Math.max(maxDistance, currentDistance);
 			}
-			for (int i = 0;i < 8; i++) {
-				if (c1+dx[i] >=1 && c1+dx[i] <= r && c2+dy[i] >= 1 && c2+dy[i] <= c && !vis[c1+dx[i]][c2+dy[i]]) {
+			for (int i = 0; i < 8; i++) {
+				if (c1 + dx[i] >= 1 && c1 + dx[i] <= r && c2 + dy[i] >= 1 && c2 + dy[i] <= c && !vis[c1 + dx[i]][c2 + dy[i]]) {
 					q.add(new Pair(c1 + dx[i], c2 + dy[i]));
-					vis[c1+dx[i]][c2+dy[i]] = true;
-					dist[c1+dx[i]][c2+dy[i]] = currentDistance+1;
+					vis[c1 + dx[i]][c2 + dy[i]] = true;
+					dist[c1 + dx[i]][c2 + dy[i]] = currentDistance + 1;
 				}
 			}
 		}
@@ -58,13 +69,13 @@ class DEVPERF {
 		while (tc-- > -0) {
 			int r = in.readInt();
 			int c = in.readInt();
-			int minR=Integer.MAX_VALUE, maxR=Integer.MIN_VALUE, minC=Integer.MAX_VALUE, maxC=Integer.MIN_VALUE;
+			int minR = Integer.MAX_VALUE, maxR = Integer.MIN_VALUE, minC = Integer.MAX_VALUE, maxC = Integer.MIN_VALUE;
 			String enterRow;
-
+			
 			for (int i = 1; i <= r; i++) {
 				enterRow = in.readString();
 				for (int j = 1; j <= c; j++) {
-					grid[i][j] = enterRow.charAt(j-1);
+					grid[i][j] = enterRow.charAt(j - 1);
 					if (grid[i][j] == '*') {
 						minR = Math.min(minR, i);
 						maxR = Math.max(maxR, i);
@@ -73,23 +84,23 @@ class DEVPERF {
 					}
 				}
 			}
-
+			
 			if (minR == Integer.MAX_VALUE) {
 				out.printLine("0");
 				continue;
 			}
-
-			HashSet<Pair> possibleMidpoints =new HashSet<Pair>();
-			possibleMidpoints.add(new Pair((int)Math.ceil(((minR + maxR) / 2.0)), (int) Math.ceil((((minC + maxC) / 2.0)))));
-			possibleMidpoints.add(new Pair((int)Math.floor(((minR + maxR) / 2.0)), (int) Math.ceil((((minC + maxC) / 2.0)))));
-			possibleMidpoints.add(new Pair((int)Math.ceil(((minR + maxR) / 2.0)), (int) Math.floor((((minC + maxC) / 2.0)))));
-			possibleMidpoints.add(new Pair((int)Math.floor(((minR + maxR) / 2.0)), (int) Math.floor((((minC + maxC) / 2.0)))));
-
+			
+			HashSet<Pair> possibleMidpoints = new HashSet<Pair>();
+			possibleMidpoints.add(new Pair((int) Math.ceil(((minR + maxR) / 2.0)), (int) Math.ceil((((minC + maxC) / 2.0)))));
+			possibleMidpoints.add(new Pair((int) Math.floor(((minR + maxR) / 2.0)), (int) Math.ceil((((minC + maxC) / 2.0)))));
+			possibleMidpoints.add(new Pair((int) Math.ceil(((minR + maxR) / 2.0)), (int) Math.floor((((minC + maxC) / 2.0)))));
+			possibleMidpoints.add(new Pair((int) Math.floor(((minR + maxR) / 2.0)), (int) Math.floor((((minC + maxC) / 2.0)))));
+			
 			int min = Integer.MAX_VALUE;
 			for (Pair toCheck : possibleMidpoints) {
 				min = Math.min(min, getMaxTimeUsingBFS(toCheck.first, toCheck.second, r, c));
 			}
-
+			
 			out.printLine(min);
 		}
 	}
