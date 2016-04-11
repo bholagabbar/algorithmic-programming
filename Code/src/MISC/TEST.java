@@ -1,18 +1,10 @@
 package MISC;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.io.Writer;
-import java.util.Arrays;
+import java.io.*;
 import java.util.InputMismatchException;
-import java.util.TreeMap;
 
 /**
- * Created by Shreyans Sheth [bholagabbar] on 1/6/2016 at 2:55 PM using IntelliJ IDEA (Fast IO Template)
+ * Created by Shreyans Sheth [bholagabbar] on 4/11/2016 at 8:23 PM using IDEA
  */
 
 class TEST {
@@ -20,54 +12,8 @@ class TEST {
 		//System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/src/Stdin_File_Read.txt"));
 		InputReader in = new InputReader(System.in);
 		OutputWriter out = new OutputWriter(System.out);
-		int tc = in.readInt();
-		while (tc-- > 0) {
-			int numberOfDays = in.readInt(), whiteButtons = in.readInt(), blackButtons = in.readInt();
-			
-			int[] diffBetweenButtons = new int[numberOfDays];
-			TreeMap<Integer, Integer> getClosestValue = new TreeMap<Integer, Integer>();
-			
-			for (int i = 0; i < numberOfDays; i++) {
-				diffBetweenButtons[i] = in.readInt();
-			}
-			for (int i = 0; i < numberOfDays; i++) {
-				diffBetweenButtons[i] = Math.abs(diffBetweenButtons[i] - in.readInt());
-			}
-			for (int i = 0; i < whiteButtons; i++) {
-				int buttonValue = in.readInt();
-				if (!getClosestValue.containsKey(buttonValue)) {
-					getClosestValue.put(buttonValue, 1);
-				} else {
-					getClosestValue.put(buttonValue, getClosestValue.get(buttonValue) + 1);
-				}
-			}
-			for (int i = 0; i < blackButtons; i++) {
-				int buttonValue = in.readInt();
-				if (!getClosestValue.containsKey(buttonValue)) {
-					getClosestValue.put(buttonValue, 1);
-				} else {
-					getClosestValue.put(buttonValue, getClosestValue.get(buttonValue) + 1);
-				}
-			}
-			
-			
-			Arrays.sort(diffBetweenButtons);
-			int finalMinDiff = 0;
-			
-			for (int i = numberOfDays - 1; i >= 0; i--) {
-				finalMinDiff += diffBetweenButtons[i];
-				Integer canReduce = getClosestValue.floorKey(diffBetweenButtons[i]);
-				if (canReduce != null) {
-					finalMinDiff -= canReduce;
-					if (getClosestValue.get(canReduce) == 1) {
-						getClosestValue.remove(canReduce);
-					} else {
-						getClosestValue.put(canReduce, getClosestValue.get(canReduce) - 1);
-					}
-				}
-			}
-			out.printLine(finalMinDiff);
-		}
+		System.out.println("Hello World");
+		
 	}
 	
 	//FAST IO
@@ -248,4 +194,4 @@ class TEST {
 			writer.flush();
 		}
 	}
-} 
+}
