@@ -1,75 +1,75 @@
 /**
  * PROBLEM STATEMENT
- * <p/>
+ * <p>
  * Little Elephant from the Zoo of Lviv likes integers.
- * <p/>
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * You are given an int[] A. On a single turn, Little Elephant can double (i.e., multiply by 2) any
  * element of A. He may double the same element more than once, if he wants to. He wants to obtain an
  * array in which all elements are equal. Return "YES" (quotes for clarity) if it is possible to do
  * that and "NO" otherwise.
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
  * DEFINITION
  * Class:LittleElephantAndDouble
  * Method:getAnswer
  * Parameters:int[]
  * Returns:String
  * Method signature:String getAnswer(int[] A)
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * NOTES
  * -The return value is case-sensitive. Make sure that you return the exact strings "YES" and "NO".
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * CONSTRAINTS
  * -A will contain between 1 and 50 elements, inclusive.
  * -Each element of A will be between 1 and 1,000,000,000, inclusive.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * EXAMPLES
- * <p/>
+ * <p>
  * 0)
  * {1, 2}
- * <p/>
+ * <p>
  * Returns: "YES"
- * <p/>
+ * <p>
  * One possible way of making all elements equal is to double the element at index 0.
- * <p/>
+ * <p>
  * 1)
  * {1, 2, 3}
- * <p/>
+ * <p>
  * Returns: "NO"
- * <p/>
+ * <p>
  * It's impossible to make all three elements equal in this case.
- * <p/>
+ * <p>
  * 2)
  * {4, 8, 2, 1, 16}
- * <p/>
+ * <p>
  * Returns: "YES"
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
  * 3)
  * {94, 752, 94, 376, 1504}
- * <p/>
+ * <p>
  * Returns: "YES"
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
  * 4)
  * {148, 298, 1184}
- * <p/>
+ * <p>
  * Returns: "NO"
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
  * 5)
  * {7, 7, 7, 7}
- * <p/>
+ * <p>
  * Returns: "YES"
  **/
 

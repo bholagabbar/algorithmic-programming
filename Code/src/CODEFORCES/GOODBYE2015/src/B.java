@@ -1,3 +1,5 @@
+package CODEFORCES.GOODBYE2015.src;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;

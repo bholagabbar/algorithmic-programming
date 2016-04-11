@@ -5,26 +5,26 @@
  * vertex is colored 'R', 'G' or 'B'.  You are to determine the maximum
  * possible area of a triangle such that all three of its vertices are
  * the same color, or all three of its vertices are different colors.
- * <p/>
+ * <p>
  * You are given a String[] points describing the vertices.  Each
  * element of points will be in the form "color x y z", where color is
  * 'R', 'G', or 'B', and x, y, z are integers with no leading zeroes.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * DEFINITION
  * Class:FindTriangle
  * Method:largestArea
  * Parameters:String[]
  * Returns:double
  * Method signature:double largestArea(String[] points)
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * NOTES
  * -A triangle with all three vertices colinear, or two vertices
  * overlapping, has area 0.
  * -Returned value must be within 1.0e-9 absolute or relative error.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * CONSTRAINTS
  * -points will have between 5 and 50 elements, inclusive.
  * -Each element of points will be formatted as "color x y z" (quotes
@@ -32,35 +32,35 @@
  * -Each color will be 'R', 'G', or 'B'.
  * -Each x, y and z will be an integer between 0 and 999, inclusive,
  * with no leading zeros.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * EXAMPLES
- * <p/>
+ * <p>
  * 0)
  * {"R 0 0 0",
  * "R 0 4 0",
  * "R 0 0 3",
  * "G 92 14 7",
  * "G 12 16 8"}
- * <p/>
+ * <p>
  * Returns: 6.0
- * <p/>
+ * <p>
  * The coloring restrictions mean that we can only consider the first
  * three points, which form a classic 3-4-5 triangle with an area of 6.
- * <p/>
+ * <p>
  * 1)
  * {"R 0 0 0",
  * "R 0 4 0",
  * "R 0 0 3",
  * "G 0 5 0",
  * "B 0 0 12"}
- * <p/>
+ * <p>
  * Returns: 30.0
- * <p/>
+ * <p>
  * Our bet here is to take the red point at the origin, the green
  * point, and the blue point.  These actually form a 5-12-13 triangle.
  * Area = 30.
- * <p/>
+ * <p>
  * 2)
  * {"R 0 0 0",
  * "R 0 4 0",
@@ -70,25 +70,25 @@
  * "G 2 18 7",
  * "G 29 14 3",
  * "B 12 16 8"}
- * <p/>
+ * <p>
  * Returns: 225.0
- * <p/>
+ * <p>
  * We have a lot more choices here.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * 3)
  * {"R 0 0 0",
  * "R 1 1 0",
  * "R 4 4 0",
  * "G 10 10 10",
  * "G 0 1 2"}
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Returns: 0.0
- * <p/>
+ * <p>
  * All three red points are colinear.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Created by Shreyans using IntelliJ IDEA and FileEdit Plugin [TOPCODER]
  **/
 

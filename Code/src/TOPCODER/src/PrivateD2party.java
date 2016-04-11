@@ -6,78 +6,78 @@
  * You are given this information as a int[] a with n elements.
  * For each i, a[i] is either the number of the person disliked by friend i, we have a[i]=i if friend
  * i likes everybody else.
- * <p/>
+ * <p>
  * Hero is inviting his friends one at a time.
  * Whenever he invites friend i, they will accept if and only if the friend a[i] didn't accept an
  * earlier invitation.
  * (That includes two cases: either Hero didn't invite friend a[i] yet, or he did but the friend
  * rejected the invitation.)
- * <p/>
+ * <p>
  * Hero noticed that the order in which he invites his friends matters: different orders may produce
  * different numbers of accepted invitations.
- * <p/>
+ * <p>
  * Find an order that will produce the most accepted invitations, and return their number.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * DEFINITION
  * Class:PrivateD2party
  * Method:getsz
  * Parameters:int[]
  * Returns:int
  * Method signature:int getsz(int[] a)
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * CONSTRAINTS
  * -a will contain exactly n elements.
  * -n will be between 1 and 50, inclusive.
  * -Each element of a will be between 0 and n - 1, inclusive.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * EXAMPLES
- * <p/>
+ * <p>
  * 0)
  * {0,1}
- * <p/>
+ * <p>
  * Returns: 2
- * <p/>
+ * <p>
  * Each of the friends likes the other. Regardless of the order in which Hero asks them, they will
  * both accept the invitation.
- * <p/>
+ * <p>
  * 1)
  * {1,0}
- * <p/>
+ * <p>
  * Returns: 1
- * <p/>
+ * <p>
  * Friend 0 dislikes friend 1 and vice versa. The first friend Hero asks will accept the invitation
  * but then the other friend will certainly reject it.
- * <p/>
+ * <p>
  * 2)
  * {1,0,3,2}
- * <p/>
+ * <p>
  * Returns: 2
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
  * 3)
  * {5,2,2,4,5,0}
- * <p/>
+ * <p>
  * Returns: 5
- * <p/>
+ * <p>
  * Here is what would happen if Hero invited the friends in the order (0,1,2,3,4,5):
- * <p/>
+ * <p>
  * Friend 5 didn't accept yet, so friend 0 would accept.
  * Friend 2 didn't accept yet, so friend 1 would accept.
  * Friend 2 likes everybody and therefore they would accept.
  * Friend 4 didn't accept yet, so friend 3 would accept.
  * Friend 5 didn't accept yet, so friend 4 would accept.
  * Friend 0 did already accept, therefore friend 5 would reject.
- * <p/>
+ * <p>
  * It turns out that this solution happens to be optimal: there is no order such that all six friends
  * would accept the invitations.
- * <p/>
+ * <p>
  * 4)
  * {3,2,1,0,5,4}
- * <p/>
+ * <p>
  * Returns: 3
  **/
 

@@ -24,7 +24,7 @@ class KRUSKAL {
 	public static int FIND(int x)//Finding the parent of the current Node. Path compression documentation below
 	{
 		if (u[x] != u[u[x]]) {
-	        /*
+		    /*
             Finding the parent of each node. In the process, setting the parent
             of the current element and all the elements encountered in the
             recursive tree (essentially, all nodes below the parent) where the parent

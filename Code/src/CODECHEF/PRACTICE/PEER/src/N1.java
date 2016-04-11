@@ -115,7 +115,7 @@ class N1 {
 		//Debugging down below. Give grid correctly according to concept
 		
 		//System.out.println("SOURCE IS:"+(s1+1)+","+(s2+1));
-	    /*for(int i2=0;i2<r;i2++)
+		/*for(int i2=0;i2<r;i2++)
         {
             for (int j1 = 0; j1 < c; j1++)
             {

@@ -42,7 +42,7 @@ class CDVA1510 {
 				}
 			}
 			//else
-	        /*{
+		    /*{
                 no1[(int)a[j]-1]+=al.indexOf(a[j]);
             }*/
 		}

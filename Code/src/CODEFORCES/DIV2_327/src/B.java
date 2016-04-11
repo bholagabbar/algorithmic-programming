@@ -1,3 +1,5 @@
+package CODEFORCES.DIV2_327.src;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,7 +13,7 @@ import java.util.InputMismatchException;
  * Created by Shreyans Sheth [bholagabbar] on 10/25/2015 at 2:41 PM using IntelliJ IDEA (Fast IO Template)
  */
 
-public class B {
+class B {
 	public static void main(String[] args) throws Exception {
 		//System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/SPOJ/Stdin_File_Read.txt"));
 		InputReader in = new InputReader(System.in);

@@ -34,7 +34,7 @@ class PERMUT2 {
 					s1 = "";
 				}
 			}
-	            /*for(int k=0;k<no;k++) {
+		        /*for(int k=0;k<no;k++) {
 
                     System.out.println(n[k]+"\t"+in[k]);
                 }*/

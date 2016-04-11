@@ -27,7 +27,7 @@ class INTEG {
 		int x = in.readInt();
 		long cnt = 0;
 		if (x != 0) {
-			Arrays.parallelSort(a);
+			Arrays.sort(a);
 			int iop = 0;
 			if (x <= n) {
 				iop = Math.max(0, -a[x - 1]);

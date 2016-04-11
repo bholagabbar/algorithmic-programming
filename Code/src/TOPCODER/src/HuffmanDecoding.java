@@ -7,15 +7,15 @@
  * You will be given a String archive and a String[] dictionary. The i-th element of dictionary will
  * be the bit string representation of the i-th uppercase letter. Decode archive using dictionary and
  * return the result as a single String.
- * <p/>
+ * <p>
  * DEFINITION
  * Class:HuffmanDecoding
  * Method:decode
  * Parameters:String, String[]
  * Returns:String
  * Method signature:String decode(String archive, String[] dictionary)
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * CONSTRAINTS
  * -archive will contain between 1 and 50 characters, inclusive.
  * -archive will contain only the characters '0' (zero) and '1' (one).
@@ -24,46 +24,46 @@
  * -Each element of dictionary will contain only the characters '0' (zero) and '1' (one).
  * -No element of dictionary will be a prefix of any other element of dictionary.
  * -archive will be decodable using dictionary
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * EXAMPLES
- * <p/>
+ * <p>
  * 0)
  * "101101"
  * {"00","10","01","11"}
- * <p/>
+ * <p>
  * Returns: "BDC"
- * <p/>
+ * <p>
  * Because there are no elements in dictionary that are prefixes of other elements, only one element
  * of dictionary will be a prefix of archive.  In this case, it is the second element ("10") which
  * represents 'B'.  The rest of the text can be decoded using the same logic.
- * <p/>
+ * <p>
  * 1)
  * "10111010"
  * {"0","111","10"}
- * <p/>
+ * <p>
  * Returns: "CBAC"
- * <p/>
+ * <p>
  * Note that elements of dictionary can be of different lengths.
- * <p/>
+ * <p>
  * 2)
  * "0001001100100111001"
  * {"1","0"}
- * <p/>
+ * <p>
  * Returns: "BBBABBAABBABBAAABBA"
- * <p/>
+ * <p>
  * '1' is replaced by 'A', '0' is replaced by 'B'.
- * <p/>
+ * <p>
  * 3)
  * "111011011000100110"
  * {"010","00","0110","0111","11","100","101"}
- * <p/>
+ * <p>
  * Returns: "EGGFAC"
- * <p/>
+ * <p>
  * 4)
  * "001101100101100110111101011001011001010"
  * {"110","011","10","0011","00011","111","00010","0010","010","0000"}
- * <p/>
+ * <p>
  * Returns: "DBHABBACAIAIC"
  **/
 

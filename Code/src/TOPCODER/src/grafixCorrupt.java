@@ -1,25 +1,25 @@
 /**
  * PROBLEM STATEMENT
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * In the grafix file format, a bitmap is encoded as a
  * sequence of lowercase alphabetic words. All of these words are drawn from
  * a dictionary that has been built specially for the bitmap by a compression
  * algorithm. Each word in the dictionary has the same length.
- * <p/>
- * <p/>
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * It can occur that words in a grafix file are corrupted by poor
  * transmission or storage media. In such cases, grafix attempts to
  * reconstruct the original file by matching each corrupted word to a
  * dictionary word that contains one or more of the same characters at the same
  * positions.
- * <p/>
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * You are given a String[], dictionary, containing
  * every word in a grafix file's dictionary, and a String,
  * candidate, which is a possibly corrupted word in that file. If
@@ -28,60 +28,60 @@
  * value -1. Otherwise, return the zero-based index of the dictionary word
  * that has the greatest number of characters at the same positions as
  * candidate. In the event of a tie, favor the lowest index.
- * <p/>
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * DEFINITION
  * Class:grafixCorrupt
  * Method:selectWord
  * Parameters:String[], String
  * Returns:int
  * Method signature:int selectWord(String[] dictionary, String candidate)
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * CONSTRAINTS
  * -dictionary contains between 1 and 50 elements, inclusive
  * -candidate is between 1 and 20 characters long, inclusive
  * -each element of dictionary has the same length as candidate
  * -only the characters 'a' to 'z' are permitted in candidate and dictionary
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * EXAMPLES
- * <p/>
+ * <p>
  * 0)
  * {"cat", "cab", "lab"}
  * "dab"
- * <p/>
+ * <p>
  * Returns: 1
- * <p/>
+ * <p>
  * The word "dab" has two letters in the same position as both "cab" and "lab", but "cab" comes first.
- * <p/>
+ * <p>
  * 1)
  * {"cat", "cab", "lab"}
  * "lag"
- * <p/>
+ * <p>
  * Returns: 2
- * <p/>
+ * <p>
  * Here, "lab" is the best fit.
- * <p/>
+ * <p>
  * 2)
  * {"cat", "cab", "lab"}
  * "bic"
- * <p/>
+ * <p>
  * Returns: -1
- * <p/>
+ * <p>
  * The word "bic" contains a 'c' and a 'b', but neither character is at the same position in any
  * dictionary word.
- * <p/>
+ * <p>
  * 3)
  * {"zkv", "izs", "fed", "waa", "ttx", "bgt", "quy", "dtq", "dgo", "yrs",
  * "cid", "nln", "pvz", "txt", "zun", "erd", "jen", "klh", "kxy", "emf",
  * "mqt", "lza", "dzb", "ndx", "vfr", "jhs", "dkm", "elb"}
  * "cwd"
- * <p/>
+ * <p>
  * Returns: 10
- * <p/>
+ * <p>
  * 4)
  * {"zhadjsg", "vzptftx", "fbaslxs", "ejejncm", "xpxkeae", "ixrrtzw",
  * "ovctbzx", "sfzekhh", "lxzixjk", "jixdpik", "bkianck", "laclyin",
@@ -91,7 +91,7 @@
  * "lxmoncl", "sjnjfgb", "qrlqgvc", "fgvoadm", "yohsrxw", "udpvrsr",
  * "mklucgt"}
  * "vklikgf"
- * <p/>
+ * <p>
  * Returns: 36
  **/
 

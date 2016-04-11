@@ -1,3 +1,5 @@
+package CODEFORCES.DIV_2_315.src;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;

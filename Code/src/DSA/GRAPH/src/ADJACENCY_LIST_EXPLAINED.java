@@ -56,7 +56,7 @@ class ADJACENCY_LIST_EXPLAINED {
 		int count = 1;
 		Scanner scan = new Scanner(System.in);
 		try {
-	     /* Read the number of vertices and edges in graph */
+		 /* Read the number of vertices and edges in graph */
 			System.out.println("Enter the number of vertices and edges in graph");
 			number_of_vertices = scan.nextInt();
 			number_of_edges = scan.nextInt();

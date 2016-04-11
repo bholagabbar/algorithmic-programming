@@ -4,19 +4,19 @@ import java.util.TreeSet;
 
 /**
  * Single Round Match 545 Round 1 - Division II, Level One
- * <p/>
+ * <p>
  * PROBLEM STATEMENT
  * An AND-equation is an equation that looks like this:
- * <p/>
+ * <p>
  * X[0] AND X[1] AND ... AND X[N-1] = Y
- * <p/>
+ * <p>
  * Here X[i] and Y are non-negative integers and the bitwise AND
  * operation is defined in the Notes.
- * <p/>
+ * <p>
  * In C++, C#, and Java the operator AND is denoted "&". So for example
  * (P & Q & R) is the bitwise AND of numbers P, Q, and R.
  * In VB the same operator is denoted "And".
- * <p/>
+ * <p>
  * You are given a int[] A that contains exactly N+1 elements. Your
  * task is to construct an AND-equation using each element of A exactly
  * once. (That is, N of them will be on the left hand side of the AND-
@@ -25,15 +25,15 @@ import java.util.TreeSet;
  * AND-equation can be constructed, return -1. (It can be shown that
  * for each A there is at most one possible value Y, so the return
  * value is always defined correctly.)
- * <p/>
+ * <p>
  * DEFINITION
  * Class:ANDEquation
  * Method:restoreY
  * Parameters:int[]
  * Returns:int
  * Method signature:int restoreY(int[] A)
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * NOTES
  * -AND is a binary operation, performed on two numbers in binary
  * notation. First, the shorter number is prepended with leading zeroes
@@ -53,80 +53,80 @@ import java.util.TreeSet;
  * Since the function is commutative and associative, you can also
  * express it as "X[0] AND X[1] AND ... AND X[N-1]" and group the
  * operands in any way you like.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * CONSTRAINTS
  * -A will contain between 2 and 50 elements, inclusive.
  * -Each element of A will be between 0 and 1048575, inclusive.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * EXAMPLES
- * <p/>
+ * <p>
  * 0)
  * {1, 3, 5}
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Returns: 1
- * <p/>
+ * <p>
  * 5 AND 3 = 1
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * 1)
  * {31, 7}
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Returns: -1
- * <p/>
+ * <p>
  * Clearly, no AND-equation is possible in this case.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * 2)
  * {31, 7, 7}
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Returns: 7
- * <p/>
+ * <p>
  * 7 AND 31 = 7
- * <p/>
+ * <p>
  * Note that duplicate elements are possible in the input. If an
  * element appears several times in A, it must be used the same number
  * of times in the equation.
- * <p/>
+ * <p>
  * 3)
  * {1,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,0,
  * 0,0,0,0,0,0,1,0,1,0,1,1,0,0,0,1}
- * <p/>
+ * <p>
  * Returns: 0
- * <p/>
+ * <p>
  * Zeros are possible in the input.
- * <p/>
+ * <p>
  * 4)
  * {191411,256951,191411,191411,191411,256951,195507,191411,192435,191411,
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * 191411,195511,191419,191411,256947,191415,191475,195579,191415,191411,
- * <p/>
+ * <p>
  * 191483,191411,191419,191475,256947,191411,191411,191411,191419,256947,
  * 191411,191411,191411}
- * <p/>
+ * <p>
  * Returns: 191411
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
  * 5)
  * {1362,1066,1659,2010,1912,1720,1851,1593,1799,1805,1139,1493,1141,1163,1211}
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Returns: -1
- * <p/>
+ * <p>
  * 6)
  * {2, 3, 7, 19}
- * <p/>
+ * <p>
  * Returns: -1
- * <p/>
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * Created by Shreyans using IntelliJ IDEA and FileEdit Plugin [TOPCODER]
  **/
 

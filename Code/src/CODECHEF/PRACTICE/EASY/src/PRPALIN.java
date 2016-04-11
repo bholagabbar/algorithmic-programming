@@ -18,7 +18,7 @@ class PRPALIN {
 			for (int i = n; i <= 98689; i++) {
 				if (isprimef[i - 1]) {
 					//ALTERNATE CONVENTIONAL REVERSING TECHNIQUE WITH A SLIGHTLY FASTER RUNTIME
-	                 /*  int t = i;
+		             /*  int t = i;
                     int rev = 0;
                     while (t != 0)
                         {

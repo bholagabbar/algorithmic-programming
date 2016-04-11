@@ -64,7 +64,7 @@ class EZDIJKST {
 			}
 			int s = in.readInt();
 			int des = in.readInt();
-			Queue<Node> pq = new PriorityQueue<Node>(new Node());
+			Queue<Node> pq = new PriorityQueue<Node>();
 			int[] d = new int[v + 1];
 			boolean[] checked = new boolean[v + 1];
 			Arrays.fill(d, Integer.MAX_VALUE);

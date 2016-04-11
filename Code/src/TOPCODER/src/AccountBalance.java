@@ -4,7 +4,7 @@
  * been tasked with writing a module that will take an initial account
  * balance, along with a list of that day's transactions, and return
  * the ending balance for the day.
- * <p/>
+ * <p>
  * Each transaction will be either a credit, which adds funds to the
  * account, or a debit, which removes funds from the account.  If a
  * debit exceeds the available funds at the time, then the account
@@ -17,9 +17,9 @@
  * inclusive, with no leading zeros.  You are to return an int
  * representing the ending balance after processing all of the
  * transactions.
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
  * DEFINITION
  * Class:AccountBalance
  * Method:processTransactions
@@ -27,8 +27,8 @@
  * Returns:int
  * Method signature:int processTransactions(int startingBalance, String
  * [] transactions)
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * CONSTRAINTS
  * -startingBalance will be between 0 and 1000000, inclusive.
  * -transactions will have between 0 and 50 elements, inclusive.
@@ -37,45 +37,45 @@
  * -Each type will be 'C' or 'D'.
  * -Each amount will represent an integer between 1 and 1000000,
  * inclusive, with no leading zeros.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * EXAMPLES
- * <p/>
+ * <p>
  * 0)
  * 100
  * {"C 1000", "D 500", "D 350"}
- * <p/>
+ * <p>
  * Returns: 250
- * <p/>
+ * <p>
  * This person had 100 dollars, got their paycheck, then went shopping
  * at two different stores.  100 + 1000 - 500 - 350 = 250.
- * <p/>
+ * <p>
  * 1)
  * 100
  * {}
- * <p/>
+ * <p>
  * Returns: 100
- * <p/>
+ * <p>
  * With no transactions, the balance doesn't change by the end of the
  * day.
- * <p/>
+ * <p>
  * 2)
  * 100
  * {"D 50", "D 20", "D 40"}
- * <p/>
+ * <p>
  * Returns: -10
- * <p/>
+ * <p>
  * Uh oh!  This person's account is overdrawn.
- * <p/>
+ * <p>
  * 3)
  * 53874
  * {"D 1234", "C 987", "D 2345", "C 654", "D 6789", "D 34567"}
- * <p/>
+ * <p>
  * Returns: 10580
- * <p/>
+ * <p>
  * Several transactions of both types.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Created by Shreyans using IntelliJ IDEA and FileEdit Plugin [TOPCODER]
  **/
 

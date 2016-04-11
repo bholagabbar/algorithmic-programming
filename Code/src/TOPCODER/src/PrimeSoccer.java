@@ -8,48 +8,48 @@
  * percent probability that teamB will score a goal.  Assume that each team will score at most one
  * goal within each interval.  Return the probability that at least one team will have a prime number
  * as its final score.
- * <p/>
+ * <p>
  * DEFINITION
  * Class:PrimeSoccer
  * Method:getProbability
  * Parameters:int, int
  * Returns:double
  * Method signature:double getProbability(int Sa, int Sb)
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * NOTES
  * -The returned value must be accurate to within a relative or absolute value of 1E-9.
  * -A prime number is a number that has exactly two divisors, 1 and itself. Note that 0 and 1 are not
  * prime.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * CONSTRAINTS
  * -Sa will be between 0 and 100, inclusive.
  * -Sb will be between 0 and 100, inclusive.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * EXAMPLES
- * <p/>
+ * <p>
  * 0)
  * 50
  * 50
- * <p/>
+ * <p>
  * Returns: 0.5265618908306351
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
  * 1)
  * 100
  * 100
- * <p/>
+ * <p>
  * Returns: 0.0
- * <p/>
+ * <p>
  * Both teams will score a goal in each interval, so the final result will be 18 to 18.
- * <p/>
+ * <p>
  * 2)
  * 12
  * 89
- * <p/>
+ * <p>
  * Returns: 0.6772047168840167
  **/
 

@@ -50,25 +50,25 @@ class BESTBATS {
  * sum of their scores is the maximum possible. Two ways are different if there is a player who is selected in one of them is not
  * in the other. See explanation of sample cases for more clarity.
  * Input
- * <p/>
+ * <p>
  * First line contains T, number of test cases ( 1 ≤ T ≤ 100 ). T cases follow, each having 2 lines. First line of each case contains
  * scores of 11 players ( 1 ≤ score ≤ 100 ) and the second line contains K (1 ≤ K ≤ 11)
  * Output
- * <p/>
+ * <p>
  * For each test case, output the answer in a new line.
  * Example
- * <p/>
+ * <p>
  * Input:
  * 2
  * 1 2 3 4 5 6 7 8 9 10 11
  * 3
  * 2 5 1 2 4 1 6 5 2 2 1
  * 6
- * <p/>
+ * <p>
  * Output:
  * 1
  * 6
- * <p/>
+ * <p>
  * Explanation:
  * Case 1 : Maximum possible sum of scores = 11 + 10 + 9 = 30 and can be achieved only by selecting the last 3 players. Only one
  * possible way.

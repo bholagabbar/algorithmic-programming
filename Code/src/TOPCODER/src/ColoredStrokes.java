@@ -7,76 +7,76 @@
  * and the stroke will be considered horizontal if red and vertical if blue. Manao never draws two
  * horizontal or two vertical strokes that overlap. If a horizontal stroke and a vertical stroke
  * cross, the pixel at their intersection becomes green.
- * <p/>
+ * <p>
  * You're given a String[] picture denoting the bitmap after Manao's drawing experiments. The x-th
  * character of the y-th element of picture describes the color of the pixel at coordinates (x, y) of
  * the bitmap, where (0, 0) is the pixel at the top left corner and (W-1, H-1) is the pixel at the
  * bottom right corner.  'R' is red, 'G' is green, 'B' is blue and '.' is white. Return the least
  * possible number of strokes needed to obtain the given picture.
- * <p/>
+ * <p>
  * DEFINITION
  * Class:ColoredStrokes
  * Method:getLeast
  * Parameters:String[]
  * Returns:int
  * Method signature:int getLeast(String[] picture)
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * CONSTRAINTS
  * -picture will contain between 1 and 50 elements, inclusive.
  * -Each element of picture will be between 1 and 50 characters long, inclusive.
  * -All elements of picture will have equal length.
  * -Each character in picture will be 'R', 'G', 'B' or '.'.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * EXAMPLES
- * <p/>
+ * <p>
  * 0)
  * {"...",
  * "..."}
- * <p/>
+ * <p>
  * Returns: 0
- * <p/>
+ * <p>
  * The picture is blank, Manao made no strokes.
- * <p/>
+ * <p>
  * 1)
  * {"..B.",
  * "..B."}
- * <p/>
+ * <p>
  * Returns: 1
- * <p/>
+ * <p>
  * A single vertical stroke is enough.
- * <p/>
+ * <p>
  * 2)
  * {".BB."}
- * <p/>
+ * <p>
  * Returns: 2
- * <p/>
+ * <p>
  * Since only vertical strokes are painted with blue color, this picture needs two strokes.
- * <p/>
+ * <p>
  * 3)
  * {"...B..",
  * ".BRGRR",
  * ".B.B.."}
- * <p/>
+ * <p>
  * Returns: 3
- * <p/>
+ * <p>
  * One horizontal and two vertical strokes are necessary for this masterpiece.
- * <p/>
+ * <p>
  * 4)
  * {"...B..",
  * ".BRBRR",
  * ".B.B.."}
- * <p/>
+ * <p>
  * Returns: 4
- * <p/>
+ * <p>
  * This is the same picture as in the previous case with pixel (3,1) colored blue instead of green.
  * Therefore, a single horizontal stroke won't help.
- * <p/>
+ * <p>
  * 5)
  * {"GR",
  * "BG"}
- * <p/>
+ * <p>
  * Returns: 4
  **/
 

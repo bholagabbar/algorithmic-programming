@@ -79,7 +79,7 @@ class TRIE {
 			out.printLine("ekta");
 			
 			//Uncomment to see next nodes for all
-	        /*for(int i=0;i<26;i++)
+		    /*for(int i=0;i<26;i++)
             {
                 out.printLine((char)(i+65)+" :");
                 for(int j=0;j<10;j++)

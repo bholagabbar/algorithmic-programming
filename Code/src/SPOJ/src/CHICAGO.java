@@ -66,7 +66,7 @@ class CHICAGO {
 			}//Built Graph
 			int s = 1;
 			int des = v;
-			Queue<Node1> pq = new PriorityQueue<Node1>(new Node1());//Heap to extract value
+			Queue<Node1> pq = new PriorityQueue<Node1>();//Heap to extract value
 			boolean[] checked = new boolean[v + 1];
 			int[] d = new int[v + 1];//Keeping track of distances
 			Arrays.fill(d, Integer.MIN_VALUE);

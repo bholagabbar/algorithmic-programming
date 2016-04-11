@@ -2,62 +2,62 @@
  * PROBLEM STATEMENT
  * Taro and Hanako have rabbits, and they want to assign a distinct integer to each rabbit so they
  * can easily identify them.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * The rabbits have expressed their preferences to Taro and Hanako. The i-th rabbit wants an integer
  * between 1 and maxNumber[i], inclusive. Taro and Hanako must obey the preferences of all their
  * rabbits.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Return the number of ways they can assign numbers to their rabbits, modulo 1,000,000,007. If it's
  * impossible to assign distinct integers to the rabbits, return 0.
- * <p/>
+ * <p>
  * DEFINITION
  * Class:RabbitNumbering
  * Method:theCount
  * Parameters:int[]
  * Returns:int
  * Method signature:int theCount(int[] maxNumber)
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * CONSTRAINTS
  * -maxNumber will contain between 1 and 50 elements, inclusive.
  * -Each element of maxNumber will be between 1 and 1,000, inclusive.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * EXAMPLES
- * <p/>
+ * <p>
  * 0)
  * {5}
- * <p/>
+ * <p>
  * Returns: 5
- * <p/>
+ * <p>
  * They can assign any number between 1 and 5, inclusive, to the only rabbit.
- * <p/>
+ * <p>
  * 1)
  * {4, 4, 4, 4}
- * <p/>
+ * <p>
  * Returns: 24
- * <p/>
+ * <p>
  * All permutations of {1, 2, 3, 4} are possible.
- * <p/>
+ * <p>
  * 2)
  * {5, 8}
- * <p/>
+ * <p>
  * Returns: 35
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
  * 3)
  * {2, 1, 2}
- * <p/>
+ * <p>
  * Returns: 0
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
  * 4)
  * {25, 489, 76, 98, 704, 98, 768, 39, 697, 8, 56, 74, 36, 95, 87, 2, 968, 4, 920, 54, 873, 90}
- * <p/>
+ * <p>
  * Returns: 676780400
  **/
 

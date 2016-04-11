@@ -7,7 +7,6 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.Writer;
-import java.util.Comparator;
 import java.util.InputMismatchException;
 import java.util.PriorityQueue;
 
@@ -34,12 +33,7 @@ class PRATA {
 		while (tc-- > 0) {
 			int p = in.readInt();
 			int n = in.readInt();
-			PriorityQueue<Node> pq = new PriorityQueue<Node>(new Comparator<Node>() {
-				@Override
-				public int compare(Node o1, Node o2) {
-					return o1.f - o2.f;
-				}
-			});
+			PriorityQueue<Node> pq = new PriorityQueue<Node>();
 			for (int i = 0; i < n; i++) {
 				int x = in.readInt();
 				pq.add(new Node(x, x, 1));

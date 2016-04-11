@@ -35,7 +35,7 @@ class LCS {
 		}
 		System.out.println("Length of LCS is: " + dp[n][m]);
 		int index = dp[n][m];
-	    /*
+		/*
        -1  -1   Ø	M	Z	J	A	W	X	U
         0	Ø	0	0	0	0	0	0	0	0
         1	X	0	0	0	0	0	0	1	1

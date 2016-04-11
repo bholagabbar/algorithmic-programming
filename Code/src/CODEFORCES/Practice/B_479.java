@@ -48,7 +48,7 @@ public class B_479 {
 			ArrayList<String> Moves = new ArrayList<String>();
 			int cnt = 0;
 			while (cnt < k) {
-	            /*for(Node x:ts)
+		        /*for(Node x:ts)
                     out.printLine(x.x+" "+x.y);
                 out.printLine();*/
 				Node min = ts.pollFirst(), max = ts.pollLast();

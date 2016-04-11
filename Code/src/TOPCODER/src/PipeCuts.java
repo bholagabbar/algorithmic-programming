@@ -4,60 +4,60 @@
  * was originally welded from smaller pipes.  If the two cut locations are chosen at random (each
  * potential location has equal probability of being chosen), find the probability of a resulting
  * pipe being longer than L meters.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Create a method named probability that accepts a int[] weldLocations and int L as parameters.  It
  * should calculate the probability of one or more resulting pipes being strictly longer than L if
  * the two cut locations are chosen at random from weldLocations.  Each element in weldLocations
  * represents the number of meters from the left end of the pipe.
- * <p/>
+ * <p>
  * DEFINITION
  * Class:PipeCuts
  * Method:probability
  * Parameters:int[], int
  * Returns:double
  * Method signature:double probability(int[] weldLocations, int L)
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * NOTES
  * -Your return value must have a relative or absolute error less than 1e-9.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * CONSTRAINTS
  * -weldLocations will have between 2 and 50 elements, inclusive.
  * -Each element in weldLocations will be between 1 and 99, inclusive.
  * -weldLocations will not contain duplicate elements.
  * -L will be between 1 and 100, inclusive.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * EXAMPLES
- * <p/>
+ * <p>
  * 0)
  * {25, 50, 75}
  * 25
- * <p/>
+ * <p>
  * Returns: 1.0
- * <p/>
+ * <p>
  * Any random set of cuts results in a pipe being longer than 25 meters.
- * <p/>
+ * <p>
  * 1)
  * {25, 50, 75}
  * 50
- * <p/>
+ * <p>
  * Returns: 0.0
- * <p/>
+ * <p>
  * This time, it is impossible to cut the pipe such that some resulting pipe is longer than 50 meters.
- * <p/>
+ * <p>
  * 2)
  * {25, 50, 75}
  * 24
- * <p/>
+ * <p>
  * Returns: 1.0
- * <p/>
+ * <p>
  * 3)
  * {99, 88, 77, 66, 55, 44, 33, 22, 11}
  * 50
- * <p/>
+ * <p>
  * Returns: 0.7222222222222222
  **/
 

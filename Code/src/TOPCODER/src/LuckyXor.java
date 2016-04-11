@@ -1,23 +1,23 @@
 /**
  * PROBLEM STATEMENT
- * <p/>
+ * <p>
  * A lucky number is a positive integer consisting of only the digits 4 and 7.
- * <p/>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
+ * <p>
  * Given an int a, return an int b strictly greater than a, such that a XOR b is a lucky number. (See
  * Notes for the definition of XOR.) The number b should be in the range 1 to 100, inclusive. If such
  * a number does not exist, return -1. If there are multiple such b, you may return any of them.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * DEFINITION
  * Class:LuckyXor
  * Method:construct
  * Parameters:int
  * Returns:int
  * Method signature:int construct(int a)
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * NOTES
  * -XOR is the bitwise exclusive-or operation. To compute the value of P XOR Q, we first write P and
  * Q in binary. Then, each bit of the result is computed by applying XOR to the corresponding bits of
@@ -25,38 +25,38 @@
  * -For example, let's compute 21 XOR 6. In binary these two numbers are 10101 and 00110, hence their
  * XOR is 10011 in binary, which is 19 in decimal.
  * -You can read more about the XOR operation here: https://en.wikipedia.org/wiki/Exclusive_or
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * CONSTRAINTS
  * -a is between 1 and 100, inclusive.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * EXAMPLES
- * <p/>
+ * <p>
  * 0)
  * 4
- * <p/>
+ * <p>
  * Returns: 40
- * <p/>
+ * <p>
  * 4 XOR 40 = 44, 44 is a lucky number.
- * <p/>
+ * <p>
  * 1)
  * 19
- * <p/>
+ * <p>
  * Returns: 20
- * <p/>
+ * <p>
  * 19 XOR 20 = 7
- * <p/>
+ * <p>
  * 2)
  * 88
- * <p/>
+ * <p>
  * Returns: 92
- * <p/>
+ * <p>
  * 88 XOR 92 = 4
- * <p/>
+ * <p>
  * 3)
  * 36
- * <p/>
+ * <p>
  * Returns: -1
  **/
 

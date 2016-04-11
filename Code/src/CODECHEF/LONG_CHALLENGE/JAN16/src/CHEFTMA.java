@@ -51,7 +51,7 @@ class CHEFTMA {
 			}
 			
 			
-			Arrays.parallelSort(diffBetweenButtons);
+			Arrays.sort(diffBetweenButtons);
 			int finalMinDiff = 0;
 			
 			for (int i = numberOfDays - 1; i >= 0; i--) {

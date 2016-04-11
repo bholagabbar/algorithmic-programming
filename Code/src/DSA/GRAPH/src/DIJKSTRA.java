@@ -55,7 +55,7 @@ class DIJKSTRA {
 		System.out.println("Enter Source");
 		int s = sc.nextInt();
 		//int des=sc.nextInt();//Entering Destination
-		Queue<Node> pq = new PriorityQueue<Node>(new Node());//Heap to extract value
+		Queue<Node> pq = new PriorityQueue<Node>();//Heap to extract value
 		boolean[] checked = new boolean[v + 1];//Keeping track of checked values
 		int[] d = new int[v + 1];//Keeping track of distances
 		Arrays.fill(d, Integer.MAX_VALUE);

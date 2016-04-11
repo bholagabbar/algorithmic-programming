@@ -2,58 +2,58 @@
  * // PROBLEM STATEMENT
  * // In many computer systems and networks, different users are granted different levels of access to different resources.
  * In this case, you are given a int[] rights, indicating the privilege level of each user to use some system resource.  You are also given a int minPermission, which is the minimum permission a user must have to use this resource.
- * <p/>
+ * <p>
  * You are to return a String indicating which users can and cannot access this resource.  Each character in the return value corresponds to the element of users with the same index.  'A' indicates the user is allowed access, while 'D' indicates the user is denied access.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * DEFINITION
  * Class:AccessLevel
  * Method:canAccess
  * Parameters:int[], int
  * Returns:String
  * Method signature:String canAccess(int[] rights, int minPermission)
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * NOTES
  * -If users is empty, then a zero-length String ("") should be returned.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * CONSTRAINTS
  * -users will contain between 0 and 50 elements, inclusive.
  * -Each element of users will be between 0 and 100, inclusive.
  * -minPermission will be between 0 and 100, inclusive.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * EXAMPLES
- * <p/>
+ * <p>
  * 0)
  * {0,1,2,3,4,5}
  * 2
- * <p/>
+ * <p>
  * Returns: "DDAAAA"
- * <p/>
+ * <p>
  * Here, the first two users don't have sufficient privileges, but the remainder do.
- * <p/>
+ * <p>
  * 1)
  * {5,3,2,10,0}
  * 20
- * <p/>
+ * <p>
  * Returns: "DDDDD"
- * <p/>
+ * <p>
  * Unfortunately, nobody has sufficient access.
- * <p/>
+ * <p>
  * 2)
  * {}
  * 20
- * <p/>
+ * <p>
  * Returns: ""
- * <p/>
+ * <p>
  * It makes no difference what permission is required, since there are no users to check.
- * <p/>
+ * <p>
  * 3)
  * {34,78,9,52,11,1}
  * 49
- * <p/>
+ * <p>
  * Returns: "DADADD"
  **/
 
