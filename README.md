@@ -1,4 +1,4 @@
-# Programming Database
+# Algorithmic Programming Database
 
 #####This repository contains all the source code I have written till date (and will continue to do so) for algorithmic programming problems (on various platforms like CodeChef, SPOJ and CodeForces), Implementation of Data-Structures & Algorithms as well as bunch of other stuff.
 
