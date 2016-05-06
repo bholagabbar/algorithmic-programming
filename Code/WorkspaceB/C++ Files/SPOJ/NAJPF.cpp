@@ -1,14 +1,9 @@
-/*input
-3
-ababab ab
-aaaaa bbb
-aafafaasf aaf
-*/
-//Shreyans Sheth [bholagabbar]
 
+//Shreyans Sheth [bholagabbar]
+ 
 #include <bits/stdc++.h>
 using namespace std;
-#define readFile freopen("E:/Shreyans/Documents/Coding Workspace/STDINPUT.txt","v",stdin);
+#define readFile freopen("E:/Shreyans/Documents/Coding Workspace/STDINPUT.txt","r",stdin);
 #define getPrecision(s,p) fixed<<setprecision(p)<<s
 #define boostIO ios_base::sync_with_stdio(0), cin.tie(0)
 #define CLR(s) memset(&s, 0, sizeof s)
@@ -16,39 +11,36 @@ using namespace std;
 #define hashmap unordered_map
 #define PB push_back
 #define MP make_pair
-#define N 100010
+#define N 1000001
 #define F first
 #define S second
 #define endl '\n'
-
+ 
 typedef long long int ll;
 typedef long double ld;
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
-
+ 
 const ll modPrime = 1e9 + 7;
 const ll base = 257;
-ll basePower[N];
-
+ll storedPowers[N];
+ 
 void calculatePowers() {
-	basePower[0] = 1;
-	for (int i = 1 ; i < N; i++) {
-		basePower[i] = (basePower[i-1] * base) % modPrime;
-	}
+	storedPowers[0] = 1;
+    for (int i = 0; i < N; i++) {
+    	storedPowers[i+1] = (base * storedPowers[i]) % modPrime;
+    }
 }
 
 ll getStringHash(string s) {
-	int len = s.size(); 
-	int powCnt = 1;
-	ll hashValue = s[len - 1];
-	for (int i = len - 2 ; i >= 0; i--) {
-		hashValue += s[i] * basePower[powCnt];
-		hashValue %= modPrime;
-		powCnt++;
-	}
-	return hashValue;
+	ll hashValue = 0;
+    for (int i = 0; i < s.size(); i++) {
+    	hashValue = hashValue * base + s[i];
+    	hashValue %= modPrime;
+    }
+    return hashValue;
 }
-
+ 
 int main() {
 	boostIO;
 	calculatePowers();
@@ -58,21 +50,21 @@ int main() {
 		string text, pattern;
 		cin >> text >> pattern;
 		int textLen = text.size(), patternLen = pattern.size();
+		ll basePower = storedPowers[patternLen];
 		ll patternHash = getStringHash(pattern);
 		ll currTextHash = getStringHash(text.substr(0, patternLen));
 		vector<int> occurences;
 		for (int i = patternLen; i < textLen; i++) {
-			if (patternHash == currTextHash && pattern.compare(text.substr(i - patternLen, patternLen)) == 0) {
+			if (patternHash == currTextHash) {
 				occurences.PB(i - patternLen + 1);
 			}
-			currTextHash -= text[i - patternLen] * basePower[patternLen - 1];
+			currTextHash = (currTextHash * base + text[i]) % modPrime;
+			currTextHash -= (text[i - patternLen] * basePower) % modPrime;
 			if (currTextHash < 0) {
 				currTextHash += modPrime;
 			}
-			currTextHash *= base;
-			currTextHash += text[i];
 		}
-		if (patternHash == currTextHash && pattern.compare(text.substr(textLen - patternLen, patternLen)) == 0) {
+		if (patternHash == currTextHash) {
 			occurences.PB(textLen - patternLen + 1);
 		}
 		if (occurences.size() > 0) {
