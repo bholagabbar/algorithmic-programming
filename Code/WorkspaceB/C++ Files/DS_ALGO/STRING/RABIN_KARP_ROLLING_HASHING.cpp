@@ -1,3 +1,9 @@
+/*input
+3
+ababab ab
+aaaaa bbb
+aafafaasf aaf
+*/
 
 //SPOJ NAJPF
 
@@ -36,6 +42,7 @@ void calculatePowers() {
 
 ll getStringHash(string s) {
 	ll hashValue = 0;
+	//essentially from x^n + x^n-1 .....x^0 as coeffs
     for (int i = 0; i < s.size(); i++) {
     	hashValue = hashValue * base + s[i];
     	hashValue %= modPrime;
@@ -56,18 +63,15 @@ int main() {
 		ll patternHash = getStringHash(pattern);
 		ll currTextHash = getStringHash(text.substr(0, patternLen));
 		vector<int> occurences;
-		for (int i = patternLen; i < textLen; i++) {
+		for (int i = patternLen; i <= textLen; i++) {
 			if (patternHash == currTextHash) {
 				occurences.PB(i - patternLen + 1);
 			}
-			currTextHash = (currTextHash * base + text[i]) % modPrime;
-			currTextHash -= (text[i - patternLen] * basePower) % modPrime;
-			if (currTextHash < 0) {
-				currTextHash += modPrime;
+			if (i < textLen) {
+				currTextHash = (currTextHash * base + text[i]) % modPrime; //add new digit, multiply by base
+				currTextHash -= (text[i - patternLen] * basePower) % modPrime; //remove digit
+				currTextHash = currTextHash < 0 ? currTextHash + modPrime : currTextHash; //+MOD if -ve
 			}
-		}
-		if (patternHash == currTextHash) {
-			occurences.PB(textLen - patternLen + 1);
 		}
 		if (occurences.size() > 0) {
 			cout << occurences.size() << endl;

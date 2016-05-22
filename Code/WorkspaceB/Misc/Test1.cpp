@@ -1,55 +1,33 @@
+
+//Shreyans Sheth [bholagabbar]
+
 #include <bits/stdc++.h>
 using namespace std;
+#define readFile freopen("E:/Shreyans/Documents/CP-algorithmic-programming-database/Code/WorkspaceB/C++ Files/INPUT.txt","r",stdin);
+#define getPrecision(s,p) fixed<<setprecision(p)<<s
+#define boostIO ios_base::sync_with_stdio(0), cin.tie(0)
+#define CLR(s) memset(&s, 0, sizeof s)
+#define hashset unordered_set
+#define hashmap unordered_map
+#define PB push_back
+#define MP make_pair
+#define N 1000001
+#define F first
+#define S second
+#define endl '\n'
+
+typedef long long int ll;
+typedef long double ld;
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
 
 int main() {
-    int num, r;
-    string d, e, f, g, h;
-    cin >> d;
-    e = d.substr(0, 2);
-    f = d.substr(3, 2);
-    g = d.substr(6, 2);
-    h = d.substr(8, 4);
-
-
-    umang() {
+    boostIO;
+    int a[2];
+    a[0] = a[1] = 2;
+    for(int i : a) {
         
     }
-
-    int helloMyNameIsUmang;
-
-
-    if (h == "PM" || h == "NOON") {
-        stringstream convert(e);
-        convert >> r;
-        if(r >= 1 && r <= 11) {
-            r = r + 12;
-            cout << r << ":" << f << ":" << g;
-            cin >> num;
-        }
-        if(r == 12) {
-        cout << r << ":" << f << ":" << g; 
-        cin >> num;
-        } else if (k == 90) {
-            asdfasdf
-        } else {
-
-        }
-
-
-
-
-        else if(h=="AM")
-        {
-            
-            stringstream convert(e);
-        convert>>r;
-        if(r==12)
-        {
-                r=00;
-                cout<<"00"<<":"<<f<<":"<<g;
-                }
-                else 
-                cout<<"0"<<r<<":"<<f<<":"<<g;
-        }
-    }
+    
+    return 0;
 }

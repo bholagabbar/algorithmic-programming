@@ -1,7 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Chrome(executable_path=r"C:/ProgramData/chocolatey/lib/chromedriver/tools/chromedriver.exe")
+# driver = webdriver.Chrome(executable_path=r"C:/ProgramData/chocolatey/lib/chromedriver/tools/chromedriver.exe")
+driver = webdriver.Firefox()
 driver.get("http://localhost:8080/openmrs/coreapps/findpatient/findPatient.page?app=coreapps.findPatient")
 
 username = driver.find_element_by_id("username")
@@ -39,4 +40,4 @@ driver.find_element_by_id('confirmation_label').click()
 
 driver.find_element_by_id('submit').click()
 
-driver.close();
+driver.quit()

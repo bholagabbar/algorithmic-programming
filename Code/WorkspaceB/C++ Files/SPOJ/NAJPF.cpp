@@ -1,4 +1,9 @@
-
+/*input
+3
+ababab ab
+aaaaa bbb
+aafafaasf aaf
+*/
 //Shreyans Sheth [bholagabbar]
  
 #include <bits/stdc++.h>
@@ -54,18 +59,15 @@ int main() {
 		ll patternHash = getStringHash(pattern);
 		ll currTextHash = getStringHash(text.substr(0, patternLen));
 		vector<int> occurences;
-		for (int i = patternLen; i < textLen; i++) {
+		for (int i = patternLen; i <= textLen; i++) {
 			if (patternHash == currTextHash) {
 				occurences.PB(i - patternLen + 1);
 			}
-			currTextHash = (currTextHash * base + text[i]) % modPrime;
-			currTextHash -= (text[i - patternLen] * basePower) % modPrime;
-			if (currTextHash < 0) {
-				currTextHash += modPrime;
+			if (i < textLen) {
+				currTextHash = (currTextHash * base + text[i]) % modPrime;
+				currTextHash -= (text[i - patternLen] * basePower) % modPrime;
+				currTextHash = currTextHash < 0 ? currTextHash + modPrime : currTextHash;
 			}
-		}
-		if (patternHash == currTextHash) {
-			occurences.PB(textLen - patternLen + 1);
 		}
 		if (occurences.size() > 0) {
 			cout << occurences.size() << endl;
