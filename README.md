@@ -4,7 +4,7 @@
 
 The primary aim of this repository is to act as a backup for all my source code if lost and also be of help to someone looking for algorithmic implementations/solutions to certain OJ problems for reference.  My handle on all of these platforms is **bholagabbar**
 
-1. [JAVA Code Database](https://github.com/bholagabbar/CP-algorithmic-programming-database/tree/master/Code/src): This folder contains folders CODECHEF, CODEFORCES, TOPCODER, SPOJ, DATASTRUCTURES and MISC. Solutions of problems solved by me on the relevant platform all al in here
+1. [JAVA Code Database](https://github.com/bholagabbar/CP-algorithmic-programming-database/tree/master/Code/src): This folder contains folders CODECHEF, CODEFORCES, TOPCODER, SPOJ, DATASTRUCTURES and MISC. Solutions of nearly all problems solved by me on the relevant platforms are in here.
 
 2. [C++ Code Database](https://github.com/bholagabbar/CP-algorithmic-programming-database/tree/master/Code/WorkspaceB/C%2B%2B%20Files): Solutions to Online Judge problems. I also have a good implementation of Programming Contest centric Algorithms and Datastructures [here](https://github.com/bholagabbar/CP-algorithmic-programming-database/tree/master/Code/WorkspaceB/C%2B%2B%20Files/DS_ALGO)
 
