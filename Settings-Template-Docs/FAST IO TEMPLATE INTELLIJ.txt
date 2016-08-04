@@ -1,13 +1,16 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+
 import java.io.*;
 import java.util.InputMismatchException;
 
 /**
- * Created by Shreyans Sheth [bholagabbar] on $DATE at $TIME using IntelliJ IDEA (Fast IO Template)
+ * Shreyans Sheth [bholagabbar | http://shreyans-sheth.me]
+ * $DATE
  */
-
-class $NAME  {
+ 
+class $NAME {
     public static void main(String[] args) throws Exception {
-        //System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/src/Stdin_File_Read.txt"));
+        //System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/src/input.txt"));
         InputReader in = new InputReader(System.in);
         OutputWriter out = new OutputWriter(System.out);
         
