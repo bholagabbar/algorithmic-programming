@@ -1,7 +1,12 @@
 package MISC;
 
 import java.io.*;
+import java.util.HashSet;
 import java.util.InputMismatchException;
+import java.util.Random;
+import java.util.Set;
+
+import static javafx.scene.input.KeyCode.L;
 
 /**
  * Created by Shreyans Sheth [bholagabbar] on 4/11/2016 at 8:23 PM using IDEA
@@ -10,9 +15,19 @@ import java.util.InputMismatchException;
 class TEST {
 	public static void main(String[] args) throws Exception {
 		//System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/src/Stdin_File_Read.txt"));
-		InputReader in = new InputReader(System.in);
-		OutputWriter out = new OutputWriter(System.out);
-		System.out.println("Hello World");
+		Random random = new Random();
+		Set<Integer> unique = new HashSet<Integer>();
+		while (unique.size() != 10) {
+			int randomNumber=(random.nextInt());
+			unique.add(randomNumber);
+		}
+		int [] a = new int[unique.size()];
+		int i = 0;
+		for (Integer toAdd : unique) {
+			a[i] = toAdd;
+			i++;
+		}
+		//Done!
 		
 	}
 	
