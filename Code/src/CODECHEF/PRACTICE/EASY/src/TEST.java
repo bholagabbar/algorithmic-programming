@@ -1,14 +1,15 @@
 package CODECHEF.PRACTICE.EASY.src;
 
 import java.io.BufferedWriter;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.Writer;
-import java.util.InputMismatchException;
+import java.util.*;
+
+import static CODECHEF.PRACTICE.EASY.src.MSTICK.arr;
 
 /**
  * Created by Shreyans Sheth [bholagabbar] on 11/14/2015 at 2:15 AM using IntelliJ IDEA (Fast IO Template)
@@ -16,55 +17,136 @@ import java.util.InputMismatchException;
 
 class TEST {
 	
-	static int Convert(long a) {
-		String y = Long.toString(a);
-		while (y.length() != 1) {
-			int sum = 0;
-			for (int i = 0; i < y.length(); i++) {
-				sum += y.charAt(i) - 48;
-			}
-			y = Integer.toString(sum);
-		}
-		return Integer.parseInt(y);
-	}
 	
-	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/SPOJ/Stdin_File_Read.txt"));
-		InputReader in = new InputReader(System.in);
-		OutputWriter out = new OutputWriter(System.out);
-		int tc = in.readInt();
-		while (tc-- > 0) {
-			long a = in.readLong(), d = in.readLong(), l = in.readLong(), r = in.readLong(), sum = 0, ans = 0;
-			sum += Convert(a);
-			long start = a + d;
-			int cnt = 1;
-			while (Convert(start) != Convert(a)) {
-				sum += Convert(start);
-				start += d;
+	private static class ListNode {
+		public int val;
+		public ListNode next;
+		ListNode(int x) { 
+			val = x;
+			next = null; 
+		}
+	}
+
+	public static ListNode mid = null;
+
+	private static ListNode reverse(ListNode head) {
+		ListNode curr = head;
+		ListNode prev = null;
+		ListNode next = null;
+		while (curr != null) {
+			next = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = next;
+		}
+		head = prev;
+		return head;
+	}
+
+	private static int lengthOfList(ListNode head) {
+		ListNode curr = head;
+		int cnt = 0;
+		while (curr != null) {
+			cnt++;
+			curr = curr.next;
+		}
+		return cnt;
+	}
+
+	private static ListNode deleteOddList(ListNode head, int cnt) {
+		ListNode prevHead = new ListNode(head.val);
+		prevHead.next = head.next;
+		ListNode prev = null;
+		int xcnt = cnt/2;
+		int currCount = 0;
+		while (head != null) {
+			if (currCount == xcnt) {
+				ListNode temp = head;
+				//store the mid val incase removed
+				mid  = new ListNode(temp.val);
+				mid.next = temp.next;
+				prev.next = temp.next;
+				head = prev;
+			}
+			currCount++;
+			prev = head;
+			head = head.next;
+		}
+		head = prevHead;
+		return head;
+	}
+
+	private static void printList(ListNode head) {
+		ListNode curr = head;
+		while (curr != null) {
+			System.out.print(curr.val+" ");
+			curr = curr.next;
+		}
+		System.out.println();
+	}
+
+	public static int lPalin(ListNode A) {
+		int length = lengthOfList(A);
+		if (length == 1) {
+			return 1;
+		}
+		if (length % 2 == 1) {
+			A = deleteOddList(A, length);
+		}
+		ListNode fHead = new ListNode(A.val);
+		fHead.next = A.next;
+		ListNode f = A, s = null;
+		int cnt = 0;
+		if (length > 3) {
+			while (cnt < (length / 2) - 1) {
+				f = f.next;
 				cnt++;
 			}
-			//System.out.println(cnt);
-			ans -= sum * ((l - 1) / cnt);
-			start = a + (l - 2) * d;
-			System.out.println("mod is " + ((l - 1) % cnt));
-			for (int i = 0; i < (l - 1) % cnt; i++) {
-				//System.out.println("1 "+start+" "+Convert(start));
-				ans -= Convert(start);
-				start -= d;
-			}
-			out.printLine(ans + " " + start);
-			ans += sum * (r / cnt);
-			start = a + (r - 1) * d;
-			for (int i = 0; i < r % cnt; i++) {
-				//System.out.println("2 "+start+" "+Convert(start));
-				ans += Convert(start);
-				start -= d;
-			}
-			out.printLine(ans);
+			s = new ListNode(f.next.val);
+			s.next = f.next.next;
+			f.next = null;
+			f = fHead;
+			s = reverse(s);
+		} else if (length == 3){
+			s = f.next.next;
+			f.next = null;
+			s = reverse(s);
+		} else if (length == 2) {
+			s = new ListNode(f.next.val);
+			f.next = null;
 		}
-		
+		while (f != null) {
+			if (f.val != s.val) {
+				return 0;
+			}
+			f = f.next;
+			s = s.next;
+		}
+		return 1;
 	}
-	
+
+
+	public static void main(String[] args) throws Exception {
+//		System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/SPOJ/Stdin_File_Read.txt"));
+		InputReader in = new InputReader(System.in);
+		OutputWriter out = new OutputWriter(System.out);
+		
+		ListNode a = new ListNode(2);
+		ListNode b = new ListNode(3);
+		ListNode c = new ListNode(2);
+		ListNode d = new ListNode(5);
+		ListNode e = new ListNode(1);
+		
+		a.next = b;
+		b.next = c;
+//		c.next = d;
+//		d.next = e;
+		c.next = null;
+		printList(a);
+		
+		System.out.println(lPalin(a));
+	}
+
 	//FAST IO
 	private static class InputReader {
 		private InputStream stream;

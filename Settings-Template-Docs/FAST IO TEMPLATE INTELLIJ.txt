@@ -7,10 +7,12 @@ import java.util.InputMismatchException;
  * Shreyans Sheth [bholagabbar | http://shreyans-sheth.me]
  * $DATE
  */
- 
+
+//public class for CF, TC
 class $NAME {
     public static void main(String[] args) throws Exception {
         //System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/src/input.txt"));
+        //System.setIn(new FileInputStream("/media/bholagabbar/Local Disk/Shreyans/Documents/algorithmic-programming/Code/src/input.txt"));
         InputReader in = new InputReader(System.in);
         OutputWriter out = new OutputWriter(System.out);
         

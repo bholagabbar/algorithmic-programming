@@ -56,7 +56,7 @@ class Tarjan_SCC {
 			InStack[i] = false;
 		}
 		for (int i = 1; i < n; i++) {
-			if (disc[i] == -1) //Node not discovered as yet
+			if (disc[i] == -1) //TreeNode not discovered as yet
 			{
 				DFS(i); //Run DFS on this
 			}

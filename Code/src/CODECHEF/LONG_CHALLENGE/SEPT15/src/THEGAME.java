@@ -17,23 +17,23 @@ import java.util.Queue;
  */
 
 class THEGAME {
-	
+
 	static class Node {
 		int c1, c2;
-		
+
 		Node(int c1, int c2)//current char, coords
 		{
 			this.c1 = c1;
 			this.c2 = c2;
 		}
 	}
-	
+
 	static char[][] grid;
 	static boolean[][] vis;
 	static int[] dx = {1, -1, 0, 0};
 	static int[] dy = {0, 0, 1, -1};
 	static int r, c;
-	
+
 	static int BFS(int x, int y) {
 		Queue<Node> q = new LinkedList<Node>();
 		q.add(new Node(x, y));
@@ -53,7 +53,7 @@ class THEGAME {
 		}
 		return cnt;
 	}
-	
+
 	public static void main(String[] args) throws Exception {
 		//System.setIn(new FileInputStream("E:/Shreyans/Documents/Code/CODE/SPOJ/Stdin_File_Read.txt"));
 		InputReader in = new InputReader(System.in);
@@ -85,9 +85,9 @@ class THEGAME {
 			}
 			out.printLine(cnt);
 		}
-		
+
 	}
-	
+
 	//FAST IO
 	private static class InputReader {
 		private InputStream stream;
@@ -95,11 +95,11 @@ class THEGAME {
 		private int curChar;
 		private int numChars;
 		private SpaceCharFilter filter;
-		
+
 		public InputReader(InputStream stream) {
 			this.stream = stream;
 		}
-		
+
 		public int read() {
 			if (numChars == -1) {
 				throw new InputMismatchException();
@@ -117,7 +117,7 @@ class THEGAME {
 			}
 			return buf[curChar++];
 		}
-		
+
 		public int readInt() {
 			int c = read();
 			while (isSpaceChar(c)) {
@@ -139,7 +139,7 @@ class THEGAME {
 			} while (!isSpaceChar(c));
 			return res * sgn;
 		}
-		
+
 		public String readString() {
 			int c = read();
 			while (isSpaceChar(c)) {
@@ -152,7 +152,7 @@ class THEGAME {
 			} while (!isSpaceChar(c));
 			return res.toString();
 		}
-		
+
 		public double readDouble() {
 			int c = read();
 			while (isSpaceChar(c)) {
@@ -192,34 +192,34 @@ class THEGAME {
 			}
 			return res * sgn;
 		}
-		
+
 		public boolean isSpaceChar(int c) {
 			if (filter != null) {
 				return filter.isSpaceChar(c);
 			}
 			return c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == -1;
 		}
-		
+
 		public String next() {
 			return readString();
 		}
-		
+
 		public interface SpaceCharFilter {
 			public boolean isSpaceChar(int ch);
 		}
 	}
-	
+
 	private static class OutputWriter {
 		private final PrintWriter writer;
-		
+
 		public OutputWriter(OutputStream outputStream) {
 			writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(outputStream)));
 		}
-		
+
 		public OutputWriter(Writer writer) {
 			this.writer = new PrintWriter(writer);
 		}
-		
+
 		public void print(Object... objects) {
 			for (int i = 0; i < objects.length; i++) {
 				if (i != 0) {
@@ -229,17 +229,17 @@ class THEGAME {
 			}
 			writer.flush();
 		}
-		
+
 		public void printLine(Object... objects) {
 			print(objects);
 			writer.println();
 			writer.flush();
 		}
-		
+
 		public void close() {
 			writer.close();
 		}
-		
+
 		public void flush() {
 			writer.flush();
 		}

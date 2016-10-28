@@ -29,7 +29,7 @@ class CSTREET {
 		}
 	}
 	
-	public static int FIND(int x)//Finding the parent of the current Node. Path compression documentation below
+	public static int FIND(int x)//Finding the parent of the current TreeNode. Path compression documentation below
 	{
 		if (u[x] != u[u[x]]) {
 			u[x] = FIND(u[x]);
@@ -96,7 +96,7 @@ class CSTREET {
 			int ecnt = 0;
 			while (ecnt != n - 1)//Edges in MST equals n-1. Duh
 			{
-				Node cur = edges.pollFirst();//Removing Node from the list
+				Node cur = edges.pollFirst();//Removing TreeNode from the list
 				if (UNION(cur.v1, cur.v2))//If they don't belong to the same set
 				{
 					spt_sum += (cur.w * p);
