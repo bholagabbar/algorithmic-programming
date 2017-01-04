@@ -21,22 +21,20 @@ typedef long double ld;
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
 
-const ll MOD=1e9+7;
+const ll MOD = 1e9 + 7;
 
 ll C[5001][5001];
 
-void getCombinations(int n, int r)
-{ 
-    for (int i=0; i<=n; i++) {
-        for (int k=0; k<=r && k<=i; k++) {
-            C[i][k] = (k==0 || k==i) ? 1 : (C[i-1][k-1]%MOD + C[i-1][k]%MOD)%MOD;
-        }
-    }
+void getCombinations(int n, int r) {
+	for (int i = 0; i <= n; i++) {
+		for (int k = 0; k <= r && k <= i; k++) {
+			C[i][k] = (k == 0 || k == i) ? 1 : (C[i - 1][k - 1] % MOD + C[i - 1][k] % MOD) % MOD;
+		}
+	}
 }
 
-int main()
-{
-    getCombinations(5000,5000);
-    cout<<C[4][2]<<endl;
-    return 0;
+int main() {
+	getCombinations(5000, 5000);
+	cout << C[4][2] << endl;
+	return 0;
 }

@@ -8,7 +8,7 @@ aafafaasf aaf
 //SPOJ NAJPF
 
 //Shreyans Sheth [bholagabbar]
- 
+
 #include <bits/stdc++.h>
 using namespace std;
 #define readFile freopen("E:/Shreyans/Documents/Coding Workspace/STDINPUT.txt","r",stdin);
@@ -23,33 +23,33 @@ using namespace std;
 #define F first
 #define S second
 #define endl '\n'
- 
+
 typedef long long int ll;
 typedef long double ld;
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
- 
+
 const ll modPrime = 1e9 + 7;
 const ll base = 257;
 ll storedPowers[N];
- 
+
 void calculatePowers() {
 	storedPowers[0] = 1;
-    for (int i = 0; i < N; i++) {
-    	storedPowers[i+1] = (base * storedPowers[i]) % modPrime;
-    }
+	for (int i = 0; i < N; i++) {
+		storedPowers[i + 1] = (base * storedPowers[i]) % modPrime;
+	}
 }
 
 ll getStringHash(string s) {
 	ll hashValue = 0;
 	//essentially from x^n + x^n-1 .....x^0 as coeffs
-    for (int i = 0; i < s.size(); i++) {
-    	hashValue = hashValue * base + s[i];
-    	hashValue %= modPrime;
-    }
-    return hashValue;
+	for (int i = 0; i < s.size(); i++) {
+		hashValue = hashValue * base + s[i];
+		hashValue %= modPrime;
+	}
+	return hashValue;
 }
- 
+
 int main() {
 	boostIO;
 	calculatePowers();

@@ -3,9 +3,6 @@ package INTERVIEW.QUES_TRY;
 import java.io.*;
 import java.util.*;
 
-import static javafx.scene.input.KeyCode.P;
-import static javafx.scene.input.KeyCode.Q;
-
 /**
  * Shreyans Sheth [bholagabbar | http://shreyans-sheth.me]
  * 10/3/2016

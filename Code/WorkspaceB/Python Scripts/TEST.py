@@ -1,25 +1,18 @@
-import urllib
-import json
-from bs4 import BeautifulSoup
+import cv2
+import numpy
 
-def get_movies_by_city(city):
-	link = 'https://google.com/movies?near='+city
-	html_gunk = urllib.urlopen(link).read()
-	soup = BeautifulSoup(html_gunk, "html.parser")
-	movie_data = soup.findAll('div', {'class':'movie'})
-	movie_set=dict()
-	for i in range(0, len(movie_data)):
-		name = movie_data[i].find('div', {'class':'name'}).get_text()
-		up_info = movie_data[i].find('span', {'class':'info'}).get_text().split(' - ')
-		time = up_info[0]
-		genre = up_info[1].split('/')
-		lang = up_info[2]
-		info = dict()
-		info.update({'time':time})
-		info.update({'genre':genre})
-		info.update({'lang':lang})
-		movie_set.update({name : info})
-	a = json.dumps(movie_set)
-	print
+def rmse(predictions, targets):
+	return numpy.sqrt(numpy.mean((numpy.array(predictions)-numpy.array(targets))**2))
 
-get_movies_by_city('surat')
+a = [[1 ,2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
+rotated = a
+final = rotated
+min_rmse = rmse(rotated, a)
+for i in xrange(3):
+	rotated = numpy.rot90(rotated, 1)
+	curr_rmse = rmse(rotated, a)
+	print min_rmse, curr_rmse
+	if curr_rmse > min_rmse:
+		min_rmse = curr_rmse
+		final = rotated
+print final

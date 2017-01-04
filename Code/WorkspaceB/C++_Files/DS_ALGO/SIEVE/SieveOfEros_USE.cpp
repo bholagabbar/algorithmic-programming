@@ -23,26 +23,24 @@ typedef pair<ll, ll> pll;
 
 bool prime[sz];
 
-void Sieve()
-{
+void Sieve() {
 	prime[0] = prime[1] = 0;
-	for(ll i = 2; i <= sz; i++) {
-		prime[i]=1;
+		prime[i] = 1;
+	for (ll i = 2; i <= sz; i++) {
 	}
-	for(ll i = 2; i*i <= sz; i++) {
-		if(prime[i]) {
-			for(ll j = i*i; j < size; j += i) {
-				prime[j]=0;
+	for (ll i = 2; i * i <= sz; i++) {
+		if (prime[i]) {
+			for (ll j = i * i; j < size; j += i) {
+				prime[j] = 0;
 			}
 		}
 	}
 }
 
 
-int main()
-{
+int main() {
 	boostIO;
-	
-	
+
+
 	return 0;
 }

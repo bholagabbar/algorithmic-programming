@@ -12,26 +12,26 @@ int dis[100001];
 vector<pii> a[100001];
 
 class prioritize {
-	public: bool operator ()(pii &p1 ,pii &p2) {
-		return p1.S>p2.S;
+public: bool operator ()(pii &p1 , pii &p2) {
+		return p1.S > p2.S;
 	}
 };
 
 int Dijkstra(int s, int n) {
-	for (int i = 0;i <= n; i++) {
+	for (int i = 0; i <= n; i++) {
 		vis[i] = false;
 		dis[i] = INT_MAX;
 	}
 	priority_queue<pii, vector<pii>, prioritize> pq;
-	pq.push(mp(s, dis[s]=0));
-	while(!pq.empty()) {
+	pq.push(mp(s, dis[s] = 0));
+	while (!pq.empty()) {
 		pii cur = pq.top(); pq.pop();
 		int cv = cur.F, cw = cur.S;
-        	if(vis[cv]) continue;
+		if (vis[cv]) continue;
 		vis[cv] = true;
-		for(pii x : a[cv]) {
-			if(!vis[x.F] && (cw + x.S) < dis[x.F]) {
-				pq.push(mp(x.F,dis[x.F]=cw+x.S));
+		for (pii x : a[cv]) {
+			if (!vis[x.F] && (cw + x.S) < dis[x.F]) {
+				pq.push(mp(x.F, dis[x.F] = cw + x.S));
 			}
 		}
 	}
@@ -39,27 +39,27 @@ int Dijkstra(int s, int n) {
 
 int main() {
 	int tc;
-	cin>>tc;
-	while(tc--) {
+	cin >> tc;
+	while (tc--) {
 		int v1, v2, w, n, m;
 		cin >> n >> m;
-		for(int i = 0; i <= n; i++) {
+		for (int i = 0; i <= n; i++) {
 			a[i].clear();
 		}
-		for(int i = 0; i < m; i++) {
+		for (int i = 0; i < m; i++) {
 			cin >> v1 >> v2 >> w;
 			a[v1].pb(mp(v2, w));
 		}
 		int s;
-		cin>>s;
-		Dijkstra(s,n);
-		for(int i = 1; i <= n; i++) {
-			if(dis[i]!=INT_MAX) {
-				cout<<dis[i]<<" ";
+		cin >> s;
+		Dijkstra(s, n);
+		for (int i = 1; i <= n; i++) {
+			if (dis[i] != INT_MAX) {
+				cout << dis[i] << " ";
 			} else {
-				cout<<"-1 ";
+				cout << "-1 ";
 			}
 		}
 	}
-	return 0;	
+	return 0;
 }

@@ -28,7 +28,7 @@ void insert (string &s) {
 
 bool search (string tmp) {
 	int v = 0;
-	
+
 	for (int i = 0; i < tmp.size(); ++i) {
 		int c = tmp[i] - 'a';
 		if (!created[next[c][v]])
@@ -47,6 +47,6 @@ int main () {
 
 	cout << output[search ("my")] << endl;
 	cout << output[search ("me")] << endl;
-	
+
 	return 0;
 }

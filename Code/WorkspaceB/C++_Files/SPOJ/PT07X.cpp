@@ -1,7 +1,9 @@
 /*input
-3
+5
 1 2
-2 3
+1 3
+3 4
+3 5
 */
 //Shreyans Sheth [bholagabbar]
 

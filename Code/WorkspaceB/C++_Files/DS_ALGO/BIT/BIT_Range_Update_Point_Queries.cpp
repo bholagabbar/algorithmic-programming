@@ -35,54 +35,45 @@ typedef long double ld;
 
 ll bit[sz];
 
-void UpdateBIT(int r, ll val, int n)
-{
-	int index=r+1;
-	while(index<=n)
-	{
-		bit[index]+=val;
-		index+=(index&(-index));
+void UpdateBIT(int r, ll val, int n) {
+	int index = r + 1;
+	while (index <= n) {
+		bit[index] += val;
+		index += (index & (-index));
 	}
 }
 
-void rangeUpdateBIT(int p, int q, ll val, int n)
-{
-	UpdateBIT(p,val,n);
-	UpdateBIT(q+1,-val,n);
+void rangeUpdateBIT(int p, int q, ll val, int n) {
+	UpdateBIT(p, val, n);
+	UpdateBIT(q + 1, -val, n);
 }
 
-ll QueryBIT(int r)
-{
-	ll ans=0;
-	int index=r+1;
-	while(index>0)
-	{
-		ans+=bit[index];
-		index-=(index&(-index));
+ll QueryBIT(int r) {
+	ll ans = 0;
+	int index = r + 1;
+	while (index > 0) {
+		ans += bit[index];
+		index -= (index & (-index));
 	}
 	return ans;
 }
 
-int main()
-{
+int main() {
 	BoostIO;
-	int t,n,u,l,r,q;
+	int t, n, u, l, r, q;
 	ll val;
-	cin>>t;
-	while(t--)
-	{
-		cin>>n>>u;
+	cin >> t;
+	while (t--) {
+		cin >> n >> u;
 		CLR(bit);
-		for(int i=0;i<u;i++)
-		{
-			cin>>l>>r>>val;
-			rangeUpdateBIT(l,r,val,n);
+		for (int i = 0; i < u; i++) {
+			cin >> l >> r >> val;
+			rangeUpdateBIT(l, r, val, n);
 		}
-		cin>>q;
-		while(q--)
-		{
-			cin>>r;
-			cout<<QueryBIT(r)<<endl;
+		cin >> q;
+		while (q--) {
+			cin >> r;
+			cout << QueryBIT(r) << endl;
 		}
 	}
 	return 0;
